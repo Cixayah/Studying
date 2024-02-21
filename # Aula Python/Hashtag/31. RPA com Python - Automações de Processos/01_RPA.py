@@ -14,11 +14,15 @@ import time
 # while True:
 #     print(mouse.get_position())
 #     time.sleep(1)
+# Imagem no meio
+# x, y, largura, altura = pyautogui.locateOnScreen('busca_google.png')
+# pyautogui.click(x + largura/2, y + altura/2)
 pyautogui.PAUSE = 1 #tempo de espera a cada comando
 pyautogui.press('win') #pressionar win
 pyautogui.write('brave') #digitar brave
 pyautogui.press('enter') #pressionar enter
-pyautogui.write('mail google')
+pyautogui.write('https://mail.google.com/mail/u/1/#inbox')
 pyautogui.press('enter')
-x, y, largura, altura = pyautogui.locateOnScreen('busca_google.png')
-pyautogui.click(x + largura/2, y + altura/2)
+
+while not pyautogui.locateOnScreen('gmailLogo.png'):
+    time.sleep(10)

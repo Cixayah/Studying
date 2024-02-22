@@ -1,6 +1,5 @@
 import pyautogui
 import time
-import mouse
 
 # Configurar pausa entre comandos
 pyautogui.PAUSE = 1
@@ -12,13 +11,7 @@ pyautogui.press('enter')  # Pressionar Enter
 
 # Acessar o Gmail
 
-pyautogui.write('https://mail.google.com/mail/u/1/#inbox')
+pyautogui.write('gmail google')
 pyautogui.press('enter')
-
-# Aguardar até que o logo do Gmail seja localizado na tela
-# while not pyautogui.locateOnScreen('gmailLogo.png'):
-#     time.sleep(1)
-time.sleep(3)
-# Localizar a imagem do arquivo PDF na tela
-img = pyautogui.locateOnScreen('pdf.png', confidence=0.7)
-pyautogui.click(img.x, img.y)
+x, y, l, a = pyautogui.locateOnScreen('./busca_google.png')
+pyautogui.click(x+l/2, y+a/2)

@@ -1,25 +1,29 @@
 import pyautogui
 import time
-import mouse
+import os
+pyautogui.alert("O código vai começar. Não use nada do seu computador enquanto o código está rodando")
+pyautogui.PAUSE = 0.5
+# abrir o google drive no meu computador
+os.system("start brave")
 
-# Configurar pausa entre comandos
-pyautogui.PAUSE = 1
-
-# Abrir o sistema (navegador Brave)
-pyautogui.press('win')  # Pressionar a tecla Win
-pyautogui.write('brave')  # Digitar 'brave'
-pyautogui.press('enter')  # Pressionar Enter
-
-# Acessar o Gmail
-
-pyautogui.write('https://mail.google.com/mail/u/1/#inbox')
+time.sleep(1)
+pyautogui.write("https://drive.google.com/drive/my-drive")
 pyautogui.press('enter')
 
-# Aguardar até que o logo do Gmail seja localizado na tela
-# while not pyautogui.locateOnScreen('gmailLogo.png'):
-#     time.sleep(1)
-time.sleep(3)
-# Localizar a imagem do arquivo PDF na tela
+# entrar na minha área de trabalho
+pyautogui.hotkey('winleft', 'd')
+# cliquei no arquivo que eu quero fazer backup e arrastei ele
+pyautogui.moveTo(3704, 98)
+pyautogui.mouseDown()
+pyautogui.moveTo(2318, 1413)
 
+# enquanto eu to arrastando, eu vou mudar para o google drive
+pyautogui.hotkey('alt', 'tab')
+time.sleep(1)
+# larguei o arquivo no google drive
+pyautogui.mouseUp()
 
+# esperar 5 segundos
+time.sleep(5)
 
+pyautogui.alert("O código acabou de rodar. Pode usar o seu computador de novo")

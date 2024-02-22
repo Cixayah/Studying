@@ -20,5 +20,6 @@ pyautogui.press('enter')
 #     time.sleep(1)
 time.sleep(3)
 # Localizar a imagem do arquivo PDF na tela
-img = pyautogui.locateOnScreen('pdf.png', confidence=0.7)
-pyautogui.click(img.x, img.y)
+
+
+

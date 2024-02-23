@@ -241,7 +241,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Cascadia Code", 12F);
             label10.ForeColor = Color.FromArgb(80, 250, 123);
-            label10.Location = new Point(246, 186);
+            label10.Location = new Point(246, 182);
             label10.Name = "label10";
             label10.Size = new Size(73, 21);
             label10.TabIndex = 21;

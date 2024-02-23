@@ -14,7 +14,7 @@ namespace DatabaseManager
         private const string port = "";
         private const string user = "";
         private const string password = "";
-
+        
         // Database connection string
         public static string ConnectionString = $"server={server}; user={user}; database={database}; port={port}; password={password}";
     }

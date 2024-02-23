@@ -9,11 +9,11 @@ namespace DatabaseManager
     static class DatabaseConnection
     {
         // Database credentials
-        private const string server = "104.197.15.86";
-        private const string database = "pantheon";
-        private const string port = "17403";
-        private const string user = "pantheon";
-        private const string password = "GlZP4vBczOTEsC8eovnLrqwrZXK4d9yl";
+        private const string server = "";
+        private const string database = "";
+        private const string port = "";
+        private const string user = "";
+        private const string password = "";
 
         // Database connection string
         public static string ConnectionString = $"server={server}; user={user}; database={database}; port={port}; password={password}";

@@ -84,6 +84,7 @@
             btnAdd.TabStop = false;
             btnAdd.Text = "Adicionar";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtMaskPhone
             // 
@@ -278,7 +279,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 42, 54);
-            ClientSize = new Size(669, 315);
+            ClientSize = new Size(673, 331);
             Controls.Add(txtMaskCpf);
             Controls.Add(txtMaskRg);
             Controls.Add(label9);
@@ -304,7 +305,7 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             MinimizeBox = false;
-            //Name = "Employees";
+            Name = "Employees";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employees";
             ResumeLayout(false);

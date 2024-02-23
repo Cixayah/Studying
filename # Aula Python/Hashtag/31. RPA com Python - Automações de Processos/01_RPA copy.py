@@ -3,7 +3,7 @@ import time
 import os
 pyautogui.alert("O código vai começar. Não use nada do seu computador enquanto o código está rodando")
 pyautogui.PAUSE = 0.5
-# abrir o google drive no meu computador
+# abrir o google drive no meu computador 320x137
 os.system("start brave")
 
 time.sleep(1)

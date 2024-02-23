@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel\\Documents\\códigos\\c#\\CRUD\\CRUD\\CRUD.csproj": {}
+    "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel\\Documents\\códigos\\c#\\CRUD\\CRUD\\CRUD.csproj": {
+    "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel\\Documents\\códigos\\c#\\CRUD\\CRUD\\CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\CRUD.csproj",
         "projectName": "CRUD",
-        "projectPath": "C:\\Users\\Gabriel\\Documents\\códigos\\c#\\CRUD\\CRUD\\CRUD.csproj",
+        "projectPath": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\CRUD.csproj",
         "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel\\Documents\\códigos\\c#\\CRUD\\CRUD\\obj\\",
+        "outputPath": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

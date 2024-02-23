@@ -1,25 +1,35 @@
 ﻿using DatabaseManager;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CRUD
 {
     internal class Querys
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? Phone { get; set; }
-        public string? Email { get; set; }
-        public string? Address { get; set; }
-        public string? Number { get; set; }
-        public string? Neighborhood { get; set; }
-        public string? Rg { get; set; }
-        public string? Cpf { get; set; }
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string Number { get; set; }
+        public string Neighborhood { get; set; }
+        public string Rg { get; set; }
+        public string Cpf { get; set; }
 
+        // Construtor que inicializa as propriedades
+        public Querys()
+        {
+            Id = 0; // Ou qualquer valor padrão apropriado
+            Name = string.Empty;
+            Phone = string.Empty;
+            Email = string.Empty;
+            Address = string.Empty;
+            Number = string.Empty;
+            Neighborhood = string.Empty;
+            Rg = string.Empty;
+            Cpf = string.Empty;
+        }
 
         private MySqlConnection GetMySqlConnection()
         {
@@ -53,10 +63,39 @@ namespace CRUD
                 return false;
             }
         }
+
         public bool SaveEmployee()
         {
-            string insertQuery = $"INSERT INTO Employee (name, phone, email, address, number, neighborhood, rg, cpf ) VALUES('{Name}','{Phone}','{Email}','{Address}','{Number}','{Neighborhood},'{Rg}','{Cpf}')";
-            return ExecuteNonQuery(insertQuery);
+            string insertQuery = "INSERT INTO Employee (name, phone, email, address, number, neighborhood, rg, cpf) " +
+                                 "VALUES (@Name, @Phone, @Email, @Address, @Number, @Neighborhood, @Rg, @Cpf)";
+
+            try
+            {
+                using (MySqlConnection connection = GetMySqlConnection())
+                {
+                    connection.Open();
+                    using (MySqlCommand sqlCommand = CreateMySqlCommand(insertQuery, connection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Name", Name);
+                        sqlCommand.Parameters.AddWithValue("@Phone", Phone);
+                        sqlCommand.Parameters.AddWithValue("@Email", Email);
+                        sqlCommand.Parameters.AddWithValue("@Address", Address);
+                        sqlCommand.Parameters.AddWithValue("@Number", Number);
+                        sqlCommand.Parameters.AddWithValue("@Neighborhood", Neighborhood);
+                        sqlCommand.Parameters.AddWithValue("@Rg", Rg);
+                        sqlCommand.Parameters.AddWithValue("@Cpf", Cpf);
+
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro no banco de dados: {ex.Message}");
+                return false;
+            }
         }
+
     }
 }

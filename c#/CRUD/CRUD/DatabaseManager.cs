@@ -9,13 +9,14 @@ namespace DatabaseManager
     static class DatabaseConnection
     {
         // Database credentials
-        private const string server = "aws.connect.psdb.cloud";
-        private const string database = "cixayah";
-        private const string port = "3306";
-        private const string user = "07j35858xmsrg4ozuw5g";
-        private const string password = "pscale_pw_hPBdKVUtdY7hmpPuOnIneqlo29mf2cE2xEnHRUuRVto";
+        private const string server = "104.197.15.86";
+        private const string database = "pantheon";
+        private const string port = "17403";
+        private const string user = "pantheon";
+        private const string password = "GlZP4vBczOTEsC8eovnLrqwrZXK4d9yl";
 
         // Database connection string
         public static string ConnectionString = $"server={server}; user={user}; database={database}; port={port}; password={password}";
     }
 }
+

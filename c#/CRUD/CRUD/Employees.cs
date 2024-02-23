@@ -1,67 +1,76 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DatabaseManager;
+using MySql.Data.MySqlClient;
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CRUD
 {
 
     public partial class Employees : Form
     {
-        private Querys SaveQuery;
+        MySqlConnection conn = null;
+        Querys querys = new Querys();
 
         public Employees()
         {
             InitializeComponent();
-            SaveQuery = new Querys();
+
+            conn = new MySqlConnection(DatabaseConnection.ConnectionString);
+            conn.Open();
+
+            EnableTextBoxes(false);
         }
 
-        private void ShowMessageBox(string message)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(message);
+            EnableTextBoxes(true);
         }
-        private bool AreFieldsFilled()
-        {
-            return !string.IsNullOrWhiteSpace(txtName.Text) &&
-                   !string.IsNullOrWhiteSpace(txtEmail.Text) &&
-                   !string.IsNullOrWhiteSpace(txtMaskCpf.Text) &&
-                   !string.IsNullOrWhiteSpace(txtAddress.Text);
-        }
-
-        //Botões ficam aqui!
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (AreFieldsFilled())
-                {
-                    SaveQuery.Name = txtName.Text;
-                    SaveQuery.Phone = txtMaskPhone.Text;
-                    SaveQuery.Email = txtEmail.Text;
-                    SaveQuery.Address = txtAddress.Text;
-                    SaveQuery.Number = txtNumber.Text;
-                    SaveQuery.Neighborhood = txtNeighborhood.Text;
-                    SaveQuery.Rg = txtMaskRg.Text;
-                    SaveQuery.Cpf = txtMaskCpf.Text;
+            AssignTextBoxValuesToQuerys();
 
-                    if (SaveQuery.Querys())
-                    {
-                        ShowMessageBox($"O funcionário {SaveQuery.Name} foi cadastrado com sucesso!");
-                    }
-                    else
-                    {
-                        ShowMessageBox("Não foi possível cadastrar funcionário!");
-                    }
-                }
-                else
-                {
-                    ShowMessageBox("Preencha todos os campos!");
-                }
-            }
-            catch (Exception ex)
+            bool SaveSuccessful = querys.SaveEmployee();
+            if (SaveSuccessful)
             {
-                ShowMessageBox("Erro ao cadastrar: " + ex.Message);
+
+                MessageBox.Show("Registro salvo com sucesso!");
+                EnableTextBoxes(false);
+
             }
         }
+        private void Employees_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            conn.Close();
+        }
+
+        //Functions
+
+        private void EnableTextBoxes(bool p_state)
+        {
+            txtName.Enabled = p_state;
+            txtMaskPhone.Enabled = p_state;
+            txtEmail.Enabled = p_state;
+            txtAddress.Enabled = p_state;
+            txtNumber.Enabled = p_state;
+            txtNeighborhood.Enabled = p_state;
+            txtMaskRg.Enabled = p_state;
+            txtMaskCpf.Enabled = p_state;
+            if (p_state)
+                txtName.Focus();
+        }
+        private void AssignTextBoxValuesToQuerys()
+        {
+            querys.Name = txtName.Text;
+            querys.Phone = txtMaskPhone.Text;
+            querys.Email = txtEmail.Text;
+            querys.Address = txtAddress.Text;
+            querys.Number = txtNumber.Text;
+            querys.Neighborhood = txtNeighborhood.Text;
+            querys.Rg = txtMaskRg.Text;
+            querys.Cpf = txtMaskCpf.Text;
+        }
+
     }
 }

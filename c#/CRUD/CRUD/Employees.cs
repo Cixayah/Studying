@@ -8,15 +8,12 @@ namespace CRUD
 {
     public partial class Employees : Form
     {
-        MySqlConnection conn;
-        Querys querys = new Querys();
+
+        EmployeeManager querys = new EmployeeManager();
 
         public Employees()
         {
             InitializeComponent();
-            conn = new MySqlConnection(DatabaseConnection.ConnectionString);
-            conn.Open();
-
             EnableTextBoxes(false);
         }
 
@@ -40,12 +37,9 @@ namespace CRUD
             {
                 MessageBox.Show("Erro ao salvar o registro. Verifique os dados e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
-        private void Employees_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            conn.Close();
-        }
 
         // Functions
         private void EnableTextBoxes(bool p_state)

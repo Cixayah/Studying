@@ -1,7 +1,3 @@
-using MySql.Data.MySqlClient;
-using System;
-using System.Windows.Forms;
-
 namespace CRUD
 {
     public partial class MainWindow : Form
@@ -11,7 +7,6 @@ namespace CRUD
             InitializeComponent();
 
             // Adiciona o evento Load para verificar a conexão com o banco de dados quando o formulário é carregado
-            this.Load += MainWindow_Load;
         }
 
         private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,7 +27,6 @@ namespace CRUD
         }
 
         // Método para verificar a conexão com o banco de dados
-
 
     }
 }

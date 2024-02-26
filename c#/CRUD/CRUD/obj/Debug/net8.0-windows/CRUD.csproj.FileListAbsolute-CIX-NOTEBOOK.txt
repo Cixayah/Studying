@@ -1,0 +1,9 @@
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.csproj.AssemblyReference.cache
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.Employees.resources
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.MainWindow.resources
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.Properties.Resources.resources
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.csproj.GenerateResource.cache
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.AssemblyInfoInputs.cache
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.AssemblyInfo.cs
+C:\Users\Administrator\OneDrive\Studying\c#\CRUD\CRUD\obj\Debug\net8.0-windows\CRUD.csproj.CoreCompileInputs.cache

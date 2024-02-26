@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace CRUD
 {
-    internal class Querys
+    internal class EmployeeManager
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -17,10 +17,9 @@ namespace CRUD
         public string Rg { get; set; }
         public string Cpf { get; set; }
 
-        // Construtor que inicializa as propriedades
-        public Querys()
+        public EmployeeManager()
         {
-            Id = 0; // Ou qualquer valor padrão apropriado
+            Id = 0;
             Name = string.Empty;
             Phone = string.Empty;
             Email = string.Empty;
@@ -36,45 +35,31 @@ namespace CRUD
             return new MySqlConnection(DatabaseConnection.ConnectionString);
         }
 
-        private MySqlCommand CreateMySqlCommand(string query, MySqlConnection connection)
+        private MySqlCommand CreateMySqlCommand(string query, MySqlConnection conn)
         {
-            MySqlCommand command = connection.CreateCommand();
+            MySqlCommand command = conn.CreateCommand();
             command.CommandText = query;
             return command;
         }
 
-        private bool ExecuteNonQuery(string query)
+        private void ShowDatabaseErrorMessageBox(Exception ex)
         {
-            try
-            {
-                using (MySqlConnection connection = GetMySqlConnection())
-                {
-                    connection.Open();
-                    using (MySqlCommand sqlCommand = CreateMySqlCommand(query, connection))
-                    {
-                        sqlCommand.ExecuteNonQuery();
-                    }
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro no banco de dados: {ex.Message}");
-                return false;
-            }
+            MessageBox.Show($"Erro no banco de dados: {ex.Message}");
         }
 
         public bool SaveEmployee()
         {
-            string insertQuery = "INSERT INTO Employee (name, phone, email, address, number, neighborhood, rg, cpf) " +
-                                 "VALUES (@Name, @Phone, @Email, @Address, @Number, @Neighborhood, @Rg, @Cpf)";
-
             try
             {
-                using (MySqlConnection connection = GetMySqlConnection())
+                ValidateEmployeeData(); // Adicione validação dos dados aqui
+
+                using (MySqlConnection conn = GetMySqlConnection())
                 {
-                    connection.Open();
-                    using (MySqlCommand sqlCommand = CreateMySqlCommand(insertQuery, connection))
+                    conn.Open();
+                    string insertQuery = "INSERT INTO Employee (name, phone, email, address, number, neighborhood, rg, cpf) " +
+                                         "VALUES (@Name, @Phone, @Email, @Address, @Number, @Neighborhood, @Rg, @Cpf)";
+
+                    using (MySqlCommand sqlCommand = CreateMySqlCommand(insertQuery, conn))
                     {
                         sqlCommand.Parameters.AddWithValue("@Name", Name);
                         sqlCommand.Parameters.AddWithValue("@Phone", Phone);
@@ -90,11 +75,21 @@ namespace CRUD
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show($"Erro no banco de dados: {ex.Message}");
+                ShowDatabaseErrorMessageBox(ex);
                 return false;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro desconhecido: {ex.Message}");
+                return false;
+            }
+        }
+
+        private void ValidateEmployeeData()
+        {
+            // Implemente a validação dos dados aqui
         }
 
     }

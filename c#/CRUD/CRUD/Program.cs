@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace CRUD
 {
     internal static class Program
@@ -8,8 +10,8 @@ namespace CRUD
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
             ApplicationConfiguration.Initialize();
             Application.Run(new MainWindow());
         }

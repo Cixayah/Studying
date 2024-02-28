@@ -1,14 +1,11 @@
-﻿using DatabaseManager;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace CRUD
 {
     public partial class Employees : Form
     {
-
         EmployeeManager querys = new EmployeeManager();
 
         public Employees()
@@ -37,22 +34,63 @@ namespace CRUD
             {
                 MessageBox.Show("Erro ao salvar o registro. Verifique os dados e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(txtSearch.Text))
+                {
+                    querys.Cpf = txtSearch.Text; // Assumindo que o campo de pesquisa é para o CPF, ajuste conforme necessário.
+                    MySqlDataReader reader = querys.SearchEmployee();
+
+                    if (reader != null && reader.HasRows)
+                    {
+                        reader.Read();
+                        txtName.Text = reader["Name"].ToString();
+                        txtMaskPhone.Text = reader["Phone"].ToString();
+                        txtEmail.Text = reader["Email"].ToString();
+                        txtAddress.Text = reader["Address"].ToString();
+                        txtNumber.Text = reader["Number"].ToString();
+                        txtNeighborhood.Text = reader["Neighborhood"].ToString();
+                        txtMaskRg.Text = reader["Rg"].ToString();
+                        txtMaskCpf.Text = reader["Cpf"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro não encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearAllFields();
+                        txtSearch.Focus();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao buscar o registro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
-        // Functions
         private void EnableTextBoxes(bool p_state)
         {
             foreach (Control ctrl in Controls)
             {
                 if (ctrl is TextBoxBase textBoxBase)
                 {
-                    textBoxBase.Enabled = p_state;
-                    if (p_state)
+                    textBoxBase.Enabled = (textBoxBase == txtSearch) ? true : p_state;
+                    if ((textBoxBase == txtSearch) && p_state)
                         textBoxBase.Focus();
                 }
             }
+        }
+
+        private bool AreFieldsFilled()
+        {
+            return !string.IsNullOrWhiteSpace(txtName.Text) &&
+                   !string.IsNullOrWhiteSpace(txtEmail.Text) &&
+                   !string.IsNullOrWhiteSpace(txtMaskCpf.Text) &&
+                   !string.IsNullOrWhiteSpace(txtAddress.Text);
         }
 
         private void AssignTextBoxValuesToQuerys()

@@ -51,6 +51,8 @@
             label9 = new Label();
             txtMaskRg = new MaskedTextBox();
             txtMaskCpf = new MaskedTextBox();
+            txtSearch = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             btnAdd.Font = new Font("Cascadia Code", 9F);
             btnAdd.ForeColor = Color.FromArgb(255, 121, 198);
             btnAdd.ImageKey = "add.png";
-            btnAdd.Location = new Point(131, 256);
+            btnAdd.Location = new Point(207, 255);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(87, 23);
             btnAdd.TabIndex = 2;
@@ -99,7 +101,7 @@
             btnSave.FlatStyle = FlatStyle.Popup;
             btnSave.Font = new Font("Cascadia Code", 9F);
             btnSave.ForeColor = Color.FromArgb(255, 121, 198);
-            btnSave.Location = new Point(224, 256);
+            btnSave.Location = new Point(300, 255);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 4;
@@ -113,20 +115,21 @@
             btnSearch.FlatStyle = FlatStyle.Popup;
             btnSearch.Font = new Font("Cascadia Code", 9F);
             btnSearch.ForeColor = Color.FromArgb(255, 121, 198);
-            btnSearch.Location = new Point(305, 256);
+            btnSearch.Location = new Point(553, 284);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 5;
             btnSearch.TabStop = false;
             btnSearch.Text = "Buscar";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnEdit
             // 
             btnEdit.FlatStyle = FlatStyle.Popup;
             btnEdit.Font = new Font("Cascadia Code", 9F);
             btnEdit.ForeColor = Color.FromArgb(255, 121, 198);
-            btnEdit.Location = new Point(386, 256);
+            btnEdit.Location = new Point(381, 255);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(75, 23);
             btnEdit.TabIndex = 6;
@@ -139,7 +142,7 @@
             btnDelete.FlatStyle = FlatStyle.Popup;
             btnDelete.Font = new Font("Cascadia Code", 9F);
             btnDelete.ForeColor = Color.FromArgb(255, 121, 198);
-            btnDelete.Location = new Point(472, 256);
+            btnDelete.Location = new Point(462, 255);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 7;
@@ -274,12 +277,32 @@
             txtMaskCpf.Size = new Size(100, 23);
             txtMaskCpf.TabIndex = 26;
             // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(191, 284);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(356, 23);
+            txtSearch.TabIndex = 27;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Cascadia Code", 12F);
+            label6.ForeColor = Color.FromArgb(80, 250, 123);
+            label6.Location = new Point(86, 282);
+            label6.Name = "label6";
+            label6.Size = new Size(100, 21);
+            label6.TabIndex = 28;
+            label6.Text = "Pesquisar:";
+            // 
             // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 42, 54);
             ClientSize = new Size(673, 331);
+            Controls.Add(txtSearch);
+            Controls.Add(label6);
             Controls.Add(txtMaskCpf);
             Controls.Add(txtMaskRg);
             Controls.Add(label9);
@@ -336,5 +359,7 @@
         private Label label9;
         private MaskedTextBox txtMaskRg;
         private MaskedTextBox txtMaskCpf;
+        private TextBox txtSearch;
+        private Label label6;
     }
 }

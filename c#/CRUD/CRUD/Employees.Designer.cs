@@ -53,6 +53,8 @@
             txtMaskCpf = new MaskedTextBox();
             txtSearch = new TextBox();
             label6 = new Label();
+            label8 = new Label();
+            lblId = new Label();
             SuspendLayout();
             // 
             // label1
@@ -283,6 +285,7 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(356, 23);
             txtSearch.TabIndex = 27;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // label6
             // 
@@ -295,12 +298,35 @@
             label6.TabIndex = 28;
             label6.Text = "Pesquisar:";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Cascadia Code", 12F);
+            label8.ForeColor = Color.FromArgb(80, 250, 123);
+            label8.Location = new Point(68, 28);
+            label8.Name = "label8";
+            label8.Size = new Size(118, 21);
+            label8.TabIndex = 29;
+            label8.Text = "Employee id:";
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Font = new Font("Cascadia Code", 12F);
+            lblId.ForeColor = Color.FromArgb(255, 121, 198);
+            lblId.Location = new Point(185, 28);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(0, 21);
+            lblId.TabIndex = 30;
+            // 
             // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 42, 54);
             ClientSize = new Size(673, 331);
+            Controls.Add(lblId);
+            Controls.Add(label8);
             Controls.Add(txtSearch);
             Controls.Add(label6);
             Controls.Add(txtMaskCpf);
@@ -361,5 +387,7 @@
         private MaskedTextBox txtMaskCpf;
         private TextBox txtSearch;
         private Label label6;
+        private Label label8;
+        private Label lblId;
     }
 }

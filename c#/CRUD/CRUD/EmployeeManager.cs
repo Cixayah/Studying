@@ -68,7 +68,7 @@ namespace CRUD
         public bool SaveEmployee()
         {
             string insertQuery = $"INSERT INTO studying.employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
-                $" VALUES('{Name}','{Phone}','{Email}','{Address}','{Number}','{Neighborhood}','{Rg}','{Cpf}')";
+                                 $" VALUES('{Name}','{Phone}','{Email}','{Address}','{Number}','{Neighborhood}','{Rg}','{Cpf}')";
             return ExecuteNonQuery(insertQuery);
 
         }
@@ -77,19 +77,17 @@ namespace CRUD
         {
             try
             {
+                using MySqlConnection conn = GetMySqlConnection();
+                conn.Open();
+
                 string select = "SELECT name, phone, email, address, number, neighborhood, rg, cpf " +
-                                "FROM studying.employee WHERE cpf = @cpf";
+                                $"FROM studying.employee WHERE cpf = '{Cpf}';";
 
-                using (MySqlConnection conn = GetMySqlConnection())
-                {
-                    conn.Open();
+                using MySqlCommand sqlCommand = CreateMySqlCommand(select, conn);
+                sqlCommand.CommandText = select;
+                MySqlDataReader reader = sqlCommand.ExecuteReader();
 
-                    using (MySqlCommand sqlCommand = CreateMySqlCommand(select, conn))
-                    {
-                        sqlCommand.Parameters.AddWithValue("@cpf", Cpf);
-                        return sqlCommand.ExecuteReader();
-                    }
-                }
+                return reader;
             }
             catch (Exception ex)
             {
@@ -97,9 +95,6 @@ namespace CRUD
                 return null;
             }
         }
-
-
-
     }
 }
 

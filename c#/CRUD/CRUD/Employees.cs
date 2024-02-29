@@ -40,37 +40,56 @@ namespace CRUD
         {
             try
             {
-                if (!string.IsNullOrWhiteSpace(txtSearch.Text))
+                if (!string.IsNullOrEmpty(txtMaskCpf.Text))
                 {
-                    querys.Cpf = txtSearch.Text; // Assumindo que o campo de pesquisa é para o CPF, ajuste conforme necessário.
+                    querys.Cpf = new string(txtMaskCpf.Text.Where(char.IsDigit).ToArray());
+
                     MySqlDataReader reader = querys.SearchEmployee();
 
                     if (reader != null && reader.HasRows)
                     {
                         reader.Read();
-                        txtName.Text = reader["Name"].ToString();
-                        txtMaskPhone.Text = reader["Phone"].ToString();
-                        txtEmail.Text = reader["Email"].ToString();
-                        txtAddress.Text = reader["Address"].ToString();
-                        txtNumber.Text = reader["Number"].ToString();
-                        txtNeighborhood.Text = reader["Neighborhood"].ToString();
-                        txtMaskRg.Text = reader["Rg"].ToString();
-                        txtMaskCpf.Text = reader["Cpf"].ToString();
+
+                        DisplayEmployeeData(reader);
                     }
                     else
                     {
-                        MessageBox.Show("Registro não encontrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Funcionário não encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearAllFields();
                         txtSearch.Focus();
+                        lblId.Text = "";
                     }
+
+                    reader?.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Preencha o CPF", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearAllFields();
+                    txtSearch.Focus();
+                    lblId.Text = "";
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao buscar o registro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao localizar o registro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        //functions
+
+        private void DisplayEmployeeData(MySqlDataReader reader)
+        {
+            lblId.Text = reader["id"].ToString();
+            txtName.Text = reader["name"].ToString();
+            txtMaskPhone.Text = reader["phone"].ToString();
+            txtEmail.Text = reader["email"].ToString();
+            txtAddress.Text = reader["address"].ToString();
+            txtNumber.Text = reader["number"].ToString();
+            txtNeighborhood.Text = reader["neighborhood"].ToString();
+            txtMaskRg.Text = reader["rg"].ToString();
+            txtMaskCpf.Text = reader["cpf"].ToString();
+        }
 
         private void EnableTextBoxes(bool p_state)
         {
@@ -114,6 +133,11 @@ namespace CRUD
                     textBoxBase.Clear();
                 }
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

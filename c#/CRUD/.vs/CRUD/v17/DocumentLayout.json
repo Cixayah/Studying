@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|c:\\users\\gabriel\\onedrive\\studying\\c#\\crud\\crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|c:\\users\\gabriel\\onedrive\\studying\\c#\\crud\\crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,8 +46,7 @@
               "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\Employees.cs [Projeto]",
               "RelativeToolTip": "CRUD\\Employees.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-29T12:21:05.573Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-02-29T12:21:05.573Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "CRUD\\EmployeeManager.cs",
               "ViewState": "AQIAAEcAAAAAAAAAAAAAwFgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T10:50:53.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-28T10:50:53.337Z"
             }
           ]
         }

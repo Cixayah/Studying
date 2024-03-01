@@ -8,7 +8,7 @@ month = input('Em que mês? ')
 year = input('Em que ano? ')
 print(f'Bom {name}, você nasceu no dia {day} de {month} de {year} e isso significa que você tem {age} anos mesmo...')
 
-a = input('Digite o primeiro número: ')
-b = input('Digite o segundo número: ')
-total = a+b
-print ('A soma entre a+b é de', total )
+a = int(input('Digite o primeiro número: '))
+b = int(input('Digite o segundo número: '))
+total = a + b
+print('A soma entre', a, '+', b, 'é de', total)

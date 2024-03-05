@@ -3,3 +3,8 @@
 n = float(input('Digite o valor do produto: '))
 np = n - (n * 0.05)
 print(f'O valor de R${n:.2f} com 5% de desconto é R${np:.2f}')
+
+# correção prof Guanabara
+n = float(input('Digite o valor do produto: '))
+np = n - (n * 5 / 100)
+print(f'O valor de R${n:.2f} com 5% de desconto é R${np:.2f}')

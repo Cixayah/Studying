@@ -1,5 +1,5 @@
 # Escreva um programa que leia um valor em metros e exiba convertido em cm e mm
-n = float(input('Digite o valor em metros'))
+n = float(input('Digite o valor em metros: '))
 
 # Conversão
 cm = n * 100

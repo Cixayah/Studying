@@ -6,13 +6,13 @@ from tkcalendar import DateEntry
 from datetime import datetime
 
 def exportar_excel(data_inicio, data_fim, caminho_salvar):
-    # String com banco
+    # String de conexão com o banco
     engine = create_engine("mysql+pymysql://root:@127.0.0.1:3306/sakila")
 
     # Construir a consulta SQL com base nas datas selecionadas
     query = f"SELECT * FROM payment WHERE payment_date BETWEEN '{data_inicio}' AND '{data_fim}'"
 
-    # Leia os dados da tabela 'payment' usando a consulta personalizada
+    # Ler os dados da tabela 'payment' usando a consulta personalizada
     df = pd.read_sql(query, engine)
 
     # Remover coluna 'id' (se necessário)
@@ -61,12 +61,12 @@ root.title("Exportar Dados para Excel")
 # Adicionar widgets de calendário
 cal_inicio_label = tk.Label(root, text="Data de Início:")
 cal_inicio_label.pack(pady=5)
-cal_inicio = DateEntry(root, width=12, background='darkblue', foreground='white', date_pattern='yyyy-mm-dd')
+cal_inicio = DateEntry(root, width=12, background='darkblue', foreground='white', date_pattern='dd-mm-yyyy')
 cal_inicio.pack(pady=5)
 
 cal_fim_label = tk.Label(root, text="Data de Fim:")
 cal_fim_label.pack(pady=5)
-cal_fim = DateEntry(root, width=12, background='green', foreground='red', date_pattern='yyyy-mm-dd')
+cal_fim = DateEntry(root, width=12, background='green', foreground='red', date_pattern='dd-mm-yyyy')
 cal_fim.pack(pady=5)
 
 # Adicionar botão para exportar dados

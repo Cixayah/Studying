@@ -2,10 +2,10 @@
 
 
 qtd_days = int(input('Quantos dias?: '))
-qtd_km = int(input('Quantos km?: '))
+qtd_km = float(input('Quantos km?: '))
 
 day_price = 60.00
-km_price = 0.15
+km_price = 00.15
 
 total = (qtd_km * km_price) + (qtd_days * day_price)
-print(f'O total é a pagar é: {total}')
+print(f'O total é a pagar é: R${total:.2f}')

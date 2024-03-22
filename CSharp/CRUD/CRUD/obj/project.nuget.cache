@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M/l7W/oGKaGDVuoFnM1yg+IEmPpu9DI9XKsWN6Wwe+AHAVJFpxdEl8PL/tr+v6QCvYYzybCllIl6Da7G+ZoxhQ==",
+  "dgSpecHash": "38RgIjQ0mJfPT6wpyKXe5e07GsS+N4kFQK55RrFcbb8GNkMN2bad+RD7mvK5pwfInzL6XbUxliM1aYbZGv5qpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\CRUD.csproj",
+  "projectFilePath": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\CRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

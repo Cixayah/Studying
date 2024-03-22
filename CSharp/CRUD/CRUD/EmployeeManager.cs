@@ -67,7 +67,7 @@ namespace CRUD
 
         public bool SaveEmployee()
         {
-            string insertQuery = $"INSERT INTO studying.employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
+            string insertQuery = $"INSERT INTO cix.employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
                                  $" VALUES('{Name}','{Phone}','{Email}','{Address}','{Number}','{Neighborhood}','{Rg}','{Cpf}')";
             return ExecuteNonQuery(insertQuery);
 
@@ -81,7 +81,7 @@ namespace CRUD
                 conn.Open();
 
                 string select = "SELECT name, phone, email, address, number, neighborhood, rg, cpf " +
-                                $"FROM studying.employee WHERE cpf = '{Cpf}';";
+                                $"FROM cix.employee WHERE cpf = '{Cpf}';";
 
                 using MySqlCommand sqlCommand = CreateMySqlCommand(select, conn);
                 sqlCommand.CommandText = select;

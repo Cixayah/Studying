@@ -1,18 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\",
+  "WorkspaceRootPath": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|c:\\users\\gabriel\\onedrive\\studying\\c#\\crud\\crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\crud\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|c:\\users\\gabriel\\onedrive\\studying\\csharp\\crud\\crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\crud\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{020AD41B-1CCE-4248-88B5-26F664D87B8E}|CRUD\\CRUD.csproj|solutionrelative:crud\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +34,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Employees.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\Employees.cs",
-              "RelativeDocumentMoniker": "CRUD\\Employees.cs",
-              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\Employees.cs",
-              "RelativeToolTip": "CRUD\\Employees.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAewC4AAAA5AAAA",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Program.cs",
+              "RelativeDocumentMoniker": "CRUD\\Program.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Program.cs",
+              "RelativeToolTip": "CRUD\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-29T12:21:13.16Z",
+              "WhenOpened": "2024-03-22T13:38:11.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Menu.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Menu.cs",
+              "RelativeDocumentMoniker": "CRUD\\Menu.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Menu.cs [Projeto]",
+              "RelativeToolTip": "CRUD\\Menu.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T13:38:10.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "CRUD\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\DatabaseManager.cs",
+              "RelativeToolTip": "CRUD\\DatabaseManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T13:34:39.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Employees.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\Employees.cs",
+              "DocumentIndex": 5,
+              "Title": "Employees.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Employees.cs",
               "RelativeDocumentMoniker": "CRUD\\Employees.cs",
-              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\Employees.cs [Projeto]",
+              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Employees.cs",
+              "RelativeToolTip": "CRUD\\Employees.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAewDIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T12:21:13.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employees.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Employees.cs",
+              "RelativeDocumentMoniker": "CRUD\\Employees.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\Employees.cs [Projeto]",
               "RelativeToolTip": "CRUD\\Employees.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-29T12:21:05.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "EmployeeManager.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\EmployeeManager.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\EmployeeManager.cs",
               "RelativeDocumentMoniker": "CRUD\\EmployeeManager.cs",
-              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\c#\\CRUD\\CRUD\\EmployeeManager.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\OneDrive\\Studying\\CSharp\\CRUD\\CRUD\\EmployeeManager.cs",
               "RelativeToolTip": "CRUD\\EmployeeManager.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAwFgAAAAAAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAkwAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T10:50:53.337Z"
+              "WhenOpened": "2024-02-28T10:50:53.337Z",
+              "EditorCaption": ""
             }
           ]
         }

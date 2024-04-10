@@ -1,0 +1,18 @@
+- Homepage
+- Login and account creation (user and authentication)
+- Email
+- Username
+- Password
+- Movies already watched
+- Profile edit
+
+- Movies/TVShows
+    - thumb
+    - title
+    - description
+    - number of views
+    - creation date
+    - Episodes
+        - videos
+        - title
+- Search bar

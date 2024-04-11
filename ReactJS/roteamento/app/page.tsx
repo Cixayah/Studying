@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <main>
-    </main>
-  );
+  console.log("Meu console")
+  return <h1> Meu Aplicativo</h1>;
 }

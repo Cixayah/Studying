@@ -8,7 +8,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # User-specific files
-*.DatabaseManager.cs
+DatabaseManager.cs
 *.rsuser
 *.suo
 *.user
@@ -707,6 +707,7 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,python,node
+CSharp/CRUD/CRUD/DatabaseManager.cs
 CSharp/CRUD/CRUD/DatabaseManager.cs
 CSharp/CRUD/CRUD/DatabaseManager.cs
 CSharp/CRUD/CRUD/DatabaseManager.cs

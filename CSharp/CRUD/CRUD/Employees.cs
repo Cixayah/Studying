@@ -40,12 +40,10 @@ namespace CRUD
         {
             try
             {
-                if (!string.IsNullOrEmpty(txtMaskCpf.Text))
+                string searchTerm = txtSearch.Text.Trim();
+                if (!string.IsNullOrEmpty(searchTerm))
                 {
-                    querys.Cpf = new string(txtMaskCpf.Text.Where(char.IsDigit).ToArray());
-
-
-                    MySqlDataReader reader = querys.SearchEmployee();
+                    MySqlDataReader reader = querys.SearchEmployee(searchTerm);
 
                     if (reader != null && reader.HasRows)
                     {
@@ -53,19 +51,13 @@ namespace CRUD
 
                         DisplayEmployeeData(reader);
                     }
-                    else
-                    {
-                        MessageBox.Show("Funcionário não encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearAllFields();
-                        txtSearch.Focus();
-                        lblId.Text = "";
-                    }
 
-                    reader? .Close();
+
+                    reader?.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Preencha o CPF", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha o campo de busca", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearAllFields();
                     txtSearch.Focus();
                     lblId.Text = "";
@@ -76,6 +68,7 @@ namespace CRUD
                 MessageBox.Show($"Erro ao localizar o registro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         //functions
 

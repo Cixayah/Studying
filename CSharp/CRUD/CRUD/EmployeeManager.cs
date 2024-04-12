@@ -73,7 +73,7 @@ namespace CRUD
 
         }
 
-        public MySqlDataReader SearchEmployee()
+        public MySqlDataReader SearchEmployee(string searchTerm)
         {
             try
             {
@@ -81,11 +81,20 @@ namespace CRUD
                 conn.Open();
 
                 string select = $"SELECT name, phone, email, address, number, neighborhood, rg, cpf " +
-                                $"FROM railway.employee WHERE cpf = '{Cpf}';";
+                                $"FROM railway.employee WHERE cpf = '{searchTerm}';";
 
                 using MySqlCommand sqlCommand = CreateMySqlCommand(select, conn);
                 sqlCommand.CommandText = select;
                 MySqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    MessageBox.Show("Funcionário encontrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Funcionário não encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 return reader;
             }

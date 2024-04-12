@@ -138,6 +138,7 @@
             btnEdit.TabStop = false;
             btnEdit.Text = "Editar";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnDelete
             // 

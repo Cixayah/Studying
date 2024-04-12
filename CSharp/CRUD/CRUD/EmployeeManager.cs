@@ -87,22 +87,33 @@ namespace CRUD
                 sqlCommand.CommandText = select;
                 MySqlDataReader reader = sqlCommand.ExecuteReader();
 
-                if (reader.HasRows)
+                if (reader != null && reader.HasRows)
                 {
+                    reader.Read();
                     MessageBox.Show("Funcionário encontrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return reader;
                 }
                 else
                 {
                     MessageBox.Show("Funcionário não encontrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return null;
                 }
-
-                return reader;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro na busca do funcionário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
+        }
+
+
+
+        public bool EditEmployee()
+        {
+            string updateQuery = $"UPDATE railway.employee SET" +
+                $" name = '{Name}', phone = '{Phone}', email = '{Email}'," +
+                $"address = '{Address}', number = '{Number}', neighborhood = '{Neighborhood}', rg = '{Rg}', cpf = '{Cpf}' WHERE id = {Id}";
+            return ExecuteNonQuery(updateQuery);
         }
     }
 }

@@ -48,10 +48,8 @@ namespace CRUD
                     if (reader != null && reader.HasRows)
                     {
                         reader.Read();
-
                         DisplayEmployeeData(reader);
                     }
-
 
                     reader?.Close();
                 }
@@ -70,8 +68,22 @@ namespace CRUD
         }
 
 
-        //functions
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                EnableTextBoxes(true); // Habilita as caixas de texto para edição
+                                       // Você pode adicionar qualquer lógica adicional aqui, se necessário
+            }
+            else
+            {
+                MessageBox.Show("Nenhum registro selecionado para edição.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+
+
+        //functions
         private void DisplayEmployeeData(MySqlDataReader reader)
         {
             lblId.Text = reader["id"].ToString();

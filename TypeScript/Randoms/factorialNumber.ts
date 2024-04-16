@@ -8,4 +8,4 @@ function calculateFactorial(num: number): number {
 
 const num = 5;
 const factorial = calculateFactorial(num);
-console.log(`The factorial of ${num} is ${factorial}.`);
+console.log(`O fatorial de ${num} é ${factorial}.`);

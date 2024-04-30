@@ -25,7 +25,6 @@ CATEGORY_LIST = (
 )
 
 
-
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     thumb = models.ImageField(upload_to="thumbnails")

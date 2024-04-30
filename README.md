@@ -1,0 +1,1 @@
+Pastinha de estudo 🤓

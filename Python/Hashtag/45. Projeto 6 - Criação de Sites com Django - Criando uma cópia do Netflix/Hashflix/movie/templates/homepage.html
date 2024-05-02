@@ -8,16 +8,18 @@ Netflix Gotham - assistir a séries online, assistir a filmes online
 {% block content%}
 
 <header
-    class="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"
+    class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"
     style="background-image: url('{% static 'images/netflixBackground.jpg' %}');">
     <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
 
-        <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+        <h1 class="font-bold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
             Filmes, séries e muito mais, sem limites
         </h1>
+
         <h3 class="text-xl md:text-xl py-5">
             Assista onde quiser. Cancele quando quiser.
         </h3>
+
         <h4 class="text-sm md:text-lg pb-3">
             Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.
         </h4>
@@ -28,10 +30,10 @@ Netflix Gotham - assistir a séries online, assistir a filmes online
                     <div class="flex flex-grow items-stretch">
                         <input>
                         <button
-                            class="bg-primary_red font-medium md:font-normal flex justify-center items-center py-2 px-3 md:px-0 rounded-br-sm rounded-tr-sm md:text-2xl"
+                            class="bg-red-600 font-medium md:font-normal flex justify-center items-center py-2 px-3 md:px-0 rounded-br-sm rounded-tr-sm md:text-2xl"
                             type="submit">
                             <span>
-                                Vamos lá >
+                                Vamos lá
                             </span>
                             <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                         </button>

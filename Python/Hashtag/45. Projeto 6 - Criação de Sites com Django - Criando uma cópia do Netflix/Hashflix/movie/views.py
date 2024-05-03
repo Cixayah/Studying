@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Movie
-from django.views.generic import TemplateView
-
+from django.views.generic import TemplateView, ListView
 
 # Create your views here.
 # def homepage(request):
@@ -13,8 +12,14 @@ class Homepage(TemplateView):
 
 
 # url - view - html
-def home_movies(request):
-    context = {}  # {} "dicionário" Python
-    movies_list = Movie.objects.all()
-    context["movie_list"] = movies_list
-    return render(request, "home_movies.html", context)
+# def home_movies(request):
+#     context = {}  # {} "dicionário" Python
+#     movies_list = Movie.objects.all()
+#     context["movie_list"] = movies_list
+#     return render(request, "home_movies.html", context)
+
+
+class Home_movies(ListView):
+    template_name = "home_movies.html"
+    model = Movie
+    # object_list

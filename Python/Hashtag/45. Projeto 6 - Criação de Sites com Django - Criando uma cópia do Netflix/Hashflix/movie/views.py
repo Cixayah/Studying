@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Movie
 from django.views.generic import TemplateView, ListView
 
+
 # Create your views here.
 
 
@@ -17,8 +18,10 @@ class Home_movies(ListView):
 
 # url - view - html
 
+
 # def homepage(request):
 #     return render(request, "homepage.html")
+
 
 # def home_movies(request):
 #     context = {}  # {} "dicionário" Python

@@ -40,4 +40,9 @@ a = "teste";
 a = true;
 a = [];
 // union type
-let id;
+let id = "10";
+id = 200;
+// abaixo, dará erro
+// id = true
+// id = []
+// type alias

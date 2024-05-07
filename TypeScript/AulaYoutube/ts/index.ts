@@ -50,4 +50,10 @@ a = true;
 a = [];
 
 // union type
-let id: string | number;
+let id: string | number = "10";
+id = 200;
+// abaixo, dará erro
+// id = true
+// id = []
+
+// type alias

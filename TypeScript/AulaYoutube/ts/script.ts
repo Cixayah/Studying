@@ -102,13 +102,16 @@ function logger(msg: string): void {
 }
 logger("Teste!");
 
-function greeting(name: string, greet?: string) {
+function greeting(name: string, greet?: string): void {
+  //novamente, quando não retorna nada, é typado como void
+
   // "?" parametro para variável opcional
   // if (greet) {
   //   console.log(`Olá ${greet} ${name}`);
   // } else {
   //   console.log(`Olá ${name}`);
   // }
+
   if (greet) {
     console.log(`Olá ${greet} ${name}`);
     return;
@@ -118,3 +121,47 @@ function greeting(name: string, greet?: string) {
 
 greeting("Thresh");
 greeting("Rakan", "Suporte");
+
+// interfaces
+interface MathFunctionParams {
+  n1: number;
+  n2: number;
+}
+
+function sumNumbers(nums: MathFunctionParams) {
+  return nums.n1 + nums.n2;
+}
+console.log(sumNumbers({ n1: 1, n2: 2 }));
+
+function multiplyNumbers(numbers: MathFunctionParams) {
+  return numbers.n1 * numbers.n2;
+}
+const someNumbers: MathFunctionParams = {
+  n1: 5,
+  n2: 10,
+};
+console.log(multiplyNumbers(someNumbers));
+
+// narrowing
+//checagem de código
+function doSomething(info: number | boolean) {
+  if (typeof info == "number") {
+    console.log(`O número é ${info}`);
+    return;
+  }
+  console.log("Não foi passado um número");
+}
+doSomething(5);
+doSomething(true);
+
+//generics
+//<T> ou <U> são os mais utilizados nesta situação
+function showArrayItems<T>(arr: T[]) {
+  arr.forEach((item) => {
+    console.log(`ITEM: ${item}`);
+  });
+}
+const a1 = [1, 2, 3];
+const a2 = ["a", "b", "c"];
+showArrayItems(a1);
+showArrayItems(a2);

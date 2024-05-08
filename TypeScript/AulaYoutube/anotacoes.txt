@@ -13,3 +13,7 @@ tsc maneira manual que transpila todos os arquivos ts
 
 para ter transpilação automática:
 tsc -w
+
+para retirar os comentários da transpilação:
+"removeComments":true,
+

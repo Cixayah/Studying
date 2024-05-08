@@ -49,4 +49,47 @@ const shirId = 123;
 // tamanho de roupas (jeito errado: size: Médio, size: Pequeno)
 var Size;
 (function (Size) {
+    Size["P"] = "Pequeno";
+    Size["M"] = "M\u00E9dio";
+    Size["G"] = "Grande";
 })(Size || (Size = {}));
+const camisa = {
+    name: "Camisa gola V",
+    size: Size.G,
+};
+console.log(camisa);
+// literl types
+let teste;
+//teste = "outroValor"
+teste = "autenticado";
+teste = null;
+// funções
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(12, 12));
+// console.log(sum("12", true));
+function sayHelloTo(name) {
+    return `Hello ${name}`;
+}
+console.log(sayHelloTo("Cix"));
+function logger(msg) {
+    // void é quando a função não possui retorno
+    console.log(msg); // não é necessário mas é bom ter typagem de retorno
+}
+logger("Teste!");
+function greeting(name, greet) {
+    // "?" parametro para variável opcional
+    // if (greet) {
+    //   console.log(`Olá ${greet} ${name}`);
+    // } else {
+    //   console.log(`Olá ${name}`);
+    // }
+    if (greet) {
+        console.log(`Olá ${greet} ${name}`);
+        return;
+    }
+    console.log(`Olá ${name}`);
+}
+greeting("Thresh");
+greeting("Rakan", "Suporte");

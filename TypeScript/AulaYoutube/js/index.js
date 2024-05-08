@@ -42,7 +42,11 @@ a = [];
 // union type
 let id = "10";
 id = 200;
-// abaixo, dará erro
-// id = true
-// id = []
-// type alias
+const userId = 10;
+const productId = "0001";
+const shirId = 123;
+// enum
+// tamanho de roupas (jeito errado: size: Médio, size: Pequeno)
+var Size;
+(function (Size) {
+})(Size || (Size = {}));

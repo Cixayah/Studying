@@ -57,3 +57,12 @@ id = 200;
 // id = []
 
 // type alias
+type myIdType = number | string | number;
+
+const userId: myIdType = 10;
+const productId: myIdType = "0001";
+const shirId: myIdType = 123;
+
+// enum
+// tamanho de roupas (jeito errado: size: Médio, size: Pequeno)
+enum Size {}

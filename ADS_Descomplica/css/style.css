@@ -1,15 +1,14 @@
-/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
-/* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #282a36;
+  color: #f8f8f2;
   line-height: 1.6;
   padding: 20px;
 }
@@ -20,9 +19,8 @@ body {
   overflow: hidden;
 }
 
-/* Estilos específicos para a seção de início */
 #inicio {
-  background-color: #fff;
+  background-color: #1e1f29;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -34,17 +32,19 @@ body {
   max-width: 100px;
   display: block;
   margin: 0 auto 20px;
-  border-radius: 8px;
+  border-radius: 99px;
 }
 
 .title {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #f5249a;
 }
 
 .subtitle {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #bd93f9;
 }
 
 input {
@@ -52,7 +52,7 @@ input {
   padding: 10px;
   margin-bottom: 10px;
   max-width: 200px;
-  border: 1px solid #ccc;
+  border: 1px solid #6272a4;
   border-radius: 5px;
 }
 
@@ -62,14 +62,15 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .primary {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #2eec5d;
+  color: #282a36;
 }
 
 .secondary {
-  background-color: #6c757d;
-  color: #fff;
+  background-color: #ff5555;
+  color: #f8f8f2;
 }

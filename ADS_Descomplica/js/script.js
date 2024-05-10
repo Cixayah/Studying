@@ -1,0 +1,1 @@
+document.querySelector('h1.title').style.color = #cc6600;

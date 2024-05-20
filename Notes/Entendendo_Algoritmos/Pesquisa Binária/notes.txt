@@ -1,3 +1,6 @@
 A notação "Big O"
 
 Não basta saber quanto tempo um algoritmo leva para ser executado, você precisa saber se o tempo de execução aumenta conforme a lista aumenta. É aí que a notação "Big O" entra.
+
+O(log n), também conhecido como tempo logarítimic. Ex: pesquisa binária.
+O(n), conhecido como tempo linear. Ex: pesquisa simples.

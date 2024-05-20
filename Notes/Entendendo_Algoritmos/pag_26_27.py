@@ -15,7 +15,7 @@ def pesquisa_binaria(lista, item):
     alto = len(lista) - 1
     # Enquanto ainda não chegou chegar a um único elemento...
     while baixo <= alto:
-        # ...verifica o elemento central
+        # ...verifica o elemento central.
         meio = (baixo + alto) // 2
         chute = lista[meio]
         # Acha o item.

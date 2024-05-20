@@ -1,0 +1,3 @@
+A notação "Big O"
+
+Não basta saber quanto tempo um algoritmo leva para ser executado, você precisa saber se o tempo de execução aumenta conforme a lista aumenta. É aí que a notação "Big O" entra.

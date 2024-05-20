@@ -1,0 +1,5 @@
+1.1 Suponha que você tenha uma lista com 138 nomes e esteja fazendo uma pesquisa binária. Qual seria o número máximo de etapas que você levaria para encontrar o nome desejado?
+R: 128/2 = 64 | 64/2 = 32 | 32/2 = 16 | 16/2 = 8 | 8/2 = 4 | 4/2 = 2 | 2/2 = 1.
+
+1.2 Suponha que você duplique o tamanho da lista. Qual seria o número máximo de etapas agora?
+R: 7! Pois não importa a quantidade, partindo os valores ao meio, sempre será 7.

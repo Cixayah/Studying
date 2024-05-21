@@ -1,0 +1,25 @@
+Forneça o tempo de execução para um dos casos a seguir em termos da notação Big O.
+
+1.3 Você tem um nome e deseja encontrar o número de telefone para esse nome em uma agenda telefônica.
+R: Caso Pior (Busca Linear): Se a agenda não estiver organizada ou usarmos uma busca linear, o tempo de execução será 𝑂(𝑛), onde 𝑛 é o número de entradas na agenda. Isso ocorre porque podemos ter que verificar cada entrada até encontrar a correspondente ao nome desejado.
+
+Caso Comum (Busca Binária): Se a agenda estiver organizada alfabeticamente e utilizarmos uma busca binária, o tempo de execução será O(log 𝑛). A busca binária reduz pela metade o espaço de busca a cada passo, sendo muito mais eficiente.
+
+#####################################################################################################
+
+1.4 Você tem um número de telefone e deseja encontrar o dono dele em uma agenda telefônica. (Dica: Deve procurar pela agênda inteira!)
+R: Caso Pior (Busca Linear): Precisaremos verificar cada entrada na agenda até encontrar a que corresponde ao número de telefone. Assim, o tempo de execução será 𝑂(𝑛).
+
+#####################################################################################################
+
+1.5 Você quer ler o número de cada pessoa da agenda telefônica.
+R: Tempo de Execução: Este é um processo linear onde cada entrada é lida uma vez. O tempo de execução é 𝑂(𝑛).
+
+#####################################################################################################
+
+1.6 Você quer ler os números apenas dos nomes que começam com A. (Isso é complicado! Esse algoritmo envolve conceitos que são abordados mais profundamente no Capítulo 4.)
+R: Agenda Desorganizada: Se a agenda não estiver organizada, uma busca linear é necessária para verificar cada entrada se o nome começa com 'A'. O tempo de execução seria 𝑂(𝑛).
+
+Agenda Organizada (Alfabeticamente): Se a agenda estiver organizada alfabeticamente, podemos usar um algoritmo de busca para encontrar o primeiro nome começando com 'A' e continuar a leitura até o último nome começando com 'A'. O tempo de execução para encontrar o primeiro 'A' é 𝑂(log ⁡𝑛), e ler todos os nomes começando com 'A' depende da quantidade de tais nomes, que vamos chamar de 𝑚m. Assim, o tempo total seria 𝑂(log⁡𝑛+𝑚).
+
+#####################################################################################################

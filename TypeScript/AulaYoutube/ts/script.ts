@@ -9,14 +9,14 @@ let y = 12; //inferencia
 let z: number = 12; //annotation
 
 // tipos básicos
-let firstName: string = "Gabriel";
+let firstName: string = 'Gabriel';
 let age: number = 27;
 const isAdmin: boolean = true;
 
 // String != string
 
 console.log(typeof firstName);
-firstName = "Cix";
+firstName = 'Cix';
 console.log(firstName);
 
 //object
@@ -30,12 +30,12 @@ console.log(myNumbers);
 
 //tuplas -> tuple
 let myTuple: [number, string, string[]];
-myTuple = [5, "teste", ["a", "b"]];
+myTuple = [5, 'teste', ['a', 'b']];
 // myTuple = [true, false, true];
 
 //object literals -> {prop: value}
 const user: { name: string; age: number } = {
-  name: "Xayah",
+  name: 'Xayah',
   age: 20,
 };
 console.log(user);
@@ -45,12 +45,12 @@ console.log(user.name);
 
 // any
 let a: any = 0;
-a = "teste";
+a = 'teste';
 a = true;
 a = [];
 
 // union type
-let id: string | number = "10";
+let id: string | number = '10';
 id = 200;
 // abaixo, dará erro
 // id = true
@@ -60,27 +60,27 @@ id = 200;
 type myIdType = number | string | number;
 
 const userId: myIdType = 10;
-const productId: myIdType = "0001";
+const productId: myIdType = '0001';
 const shirId: myIdType = 123;
 
 // enum
 // tamanho de roupas (jeito errado: size: Médio, size: Pequeno)
 enum Size {
-  P = "Pequeno",
-  M = "Médio",
-  G = "Grande",
+  P = 'Pequeno',
+  M = 'Médio',
+  G = 'Grande',
 }
 
 const camisa = {
-  name: "Camisa gola V",
+  name: 'Camisa gola V',
   size: Size.G,
 };
 console.log(camisa);
 
 // literl types
-let teste: "autenticado" | null;
+let teste: 'autenticado' | null;
 //teste = "outroValor"
-teste = "autenticado";
+teste = 'autenticado';
 teste = null;
 
 // funções
@@ -94,13 +94,13 @@ function sayHelloTo(name: string): string {
   return `Hello ${name}`;
 }
 
-console.log(sayHelloTo("Cix"));
+console.log(sayHelloTo('Cix'));
 
 function logger(msg: string): void {
   // void é quando a função não possui retorno
   console.log(msg); // não é necessário mas é bom ter typagem de retorno
 }
-logger("Teste!");
+logger('Teste!');
 
 function greeting(name: string, greet?: string): void {
   //novamente, quando não retorna nada, é typado como void
@@ -119,8 +119,8 @@ function greeting(name: string, greet?: string): void {
   console.log(`Olá ${name}`);
 }
 
-greeting("Thresh");
-greeting("Rakan", "Suporte");
+greeting('Thresh');
+greeting('Rakan', 'Suporte');
 
 // interfaces
 interface MathFunctionParams {
@@ -145,11 +145,11 @@ console.log(multiplyNumbers(someNumbers));
 // narrowing
 //checagem de código
 function doSomething(info: number | boolean) {
-  if (typeof info == "number") {
+  if (typeof info == 'number') {
     console.log(`O número é ${info}`);
     return;
   }
-  console.log("Não foi passado um número");
+  console.log('Não foi passado um número');
 }
 doSomething(5);
 doSomething(true);
@@ -162,6 +162,6 @@ function showArrayItems<T>(arr: T[]) {
   });
 }
 const a1 = [1, 2, 3];
-const a2 = ["a", "b", "c"];
+const a2 = ['a', 'b', 'c'];
 showArrayItems(a1);
 showArrayItems(a2);

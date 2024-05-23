@@ -2,11 +2,11 @@ function calculateResult(scoreA: number, scoreB: number): string {
   const average = (scoreA + scoreB) / 2;
 
   if (average >= 7) {
-    return "Approved";
+    return 'Approved';
   } else if (average >= 4) {
-    return "Recovery";
+    return 'Recovery';
   } else {
-    return "Failed";
+    return 'Failed';
   }
 }
 

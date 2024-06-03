@@ -4,8 +4,7 @@ export const Header = () => {
     return (
         <header>
             <Link href="/">
-                <img src="/favicon.ico" alt="ícone do Gengar" />
-
+                <img src="/favicon.svg" alt="ícone do Gengar" />
             </Link>
             <nav>
                 <Link href="/">

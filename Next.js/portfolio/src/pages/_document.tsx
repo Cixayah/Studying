@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head> {/* Add closing tag for Head element */}
       <body>
         <Main />

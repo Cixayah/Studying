@@ -1,1 +1,1 @@
-console.log('Hello World!');
+let num : number = parseFloat((<HTMLInputElement>document.getElementById("myValue")).value);

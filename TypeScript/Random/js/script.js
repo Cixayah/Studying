@@ -28,33 +28,26 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
-const askQuestion = (question) => {
-    return new Promise((resolve) => {
-        rl.question(question, (input) => resolve(input));
-    });
-};
-const main = async () => {
-    try {
-        const inputA = await askQuestion('Digite o valor A: ');
-        const inputB = await askQuestion('Digite o valor B: ');
-        const inputC = await askQuestion('Digite o valor C: ');
-        const A = parseInt(inputA, 10);
-        const B = parseInt(inputB, 10);
-        const C = parseInt(inputC, 10);
-        const soma = A + B;
-        console.log(`A soma entre A e B é: ${soma}`);
-        if (soma < C) {
-            console.log('A soma é menor que C.');
+const askQuestion = () => {
+    rl.question('Digite o número da tabuada: ', (input) => {
+        let n = parseInt(input, 10);
+        if (isNaN(n)) {
+            console.log('Por favor, digite um número válido');
         }
         else {
-            console.log('A soma não é menor que C.');
+            console.log(`tabuada do ${n}`);
+            for (let i = 1; i <= 10; i++) {
+                console.log(`${n} x ${i} = ${n * i}`);
+            }
+            rl.question('Deseja continuar?: ', (answerQuestion) => {
+                if (answerQuestion.toLocaleLowerCase() == 's' || 'sim') {
+                    askQuestion();
+                }
+                else {
+                    rl.close();
+                }
+            });
         }
-    }
-    catch (error) {
-        console.error('Ocorreu um erro:', error);
-    }
-    finally {
-        rl.close();
-    }
+    });
 };
-main();
+askQuestion();

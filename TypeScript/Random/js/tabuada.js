@@ -46,6 +46,7 @@ const askQuestion = () => {
                     askQuestion();
                 }
                 else {
+                    console.log('Programa finalizado com sucesso!');
                     rl.close();
                 }
             });

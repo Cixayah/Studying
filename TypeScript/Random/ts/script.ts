@@ -32,4 +32,3 @@ const askQuestion = () => {
 };
 
 askQuestion();
-Z;

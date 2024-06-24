@@ -10,7 +10,7 @@ const askQuestion = () => {
     let n: number = parseInt(input, 10);
     if (isNaN(n)) {
       console.log('Por favor, digite um número válido');
-      askQuestion(); // Chama novamente a função em caso de entrada inválida
+      askQuestion();
     } else {
       console.log(`Tabuada do ${n}`);
       for (let i: number = 1; i <= 10; i++) {

@@ -28,19 +28,25 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
+function clear() {
+    console.clear();
+}
 const askQuestion = () => {
     rl.question('Digite o número da tabuada: ', (input) => {
         let n = parseInt(input, 10);
         if (isNaN(n)) {
             console.log('Por favor, digite um número válido');
+            askQuestion();
         }
         else {
+            clear();
             console.log(`tabuada do ${n}`);
             for (let i = 1; i <= 10; i++) {
                 console.log(`${n} x ${i} = ${n * i}`);
             }
-            rl.question('Deseja continuar?: ', (answerQuestion) => {
-                if (answerQuestion.toLocaleLowerCase() == 's' || 'sim') {
+            rl.question('Deseja continuar? (s/n): ', (answerQuestion) => {
+                if (answerQuestion.toLocaleLowerCase() === 's' ||
+                    answerQuestion.toLocaleLowerCase() === 'sim') {
                     askQuestion();
                 }
                 else {

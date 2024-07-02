@@ -9,3 +9,9 @@ const result: number = sum(5, 3);
 
 // Imprimindo o resultado no console
 console.log('O resultado da soma é:', result);
+
+function sub(c: number, d: number): number {
+  return c - d;
+}
+const subResult: number = sub(5, 3);
+console.log('O resultado da subtração é:', subResult);

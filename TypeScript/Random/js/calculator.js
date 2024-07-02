@@ -28,32 +28,50 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
-function clear() {
-    console.clear();
-}
-const askQuestion = () => {
-    rl.question('Digite o número da tabuada: ', (input) => {
-        let n = parseInt(input, 10);
-        if (isNaN(n)) {
-            console.log('Por favor, digite um número válido');
-            askQuestion();
-        }
-        else {
-            clear();
-            console.log(`tabuada do ${n}`);
-            for (let i = 1; i <= 10; i++) {
-                console.log(`${n} x ${i} = ${n * i}`);
-            }
-            rl.question('Deseja continuar? (s/n): ', (answerQuestion) => {
-                if (answerQuestion.toLocaleLowerCase() === 's' ||
-                    answerQuestion.toLocaleLowerCase() === 'sim') {
-                    askQuestion();
-                }
-                else {
-                    rl.close();
-                }
-            });
-        }
+const askQuestion = (question) => {
+    return new Promise((resolve) => {
+        rl.question(question, (input) => resolve(input));
     });
 };
-askQuestion();
+const main = async () => {
+    try {
+        const inputZ = await askQuestion('Qual operação deseja realizar? 1 - Adição, 2 - Subtração, 3 - Multiplicação, 4 - Divisão: ');
+        const inputA = await askQuestion('Digite o valor A: ');
+        const inputB = await askQuestion('Digite o valor B: ');
+        const Z = parseInt(inputZ, 10);
+        const A = parseInt(inputA, 10);
+        const B = parseInt(inputB, 10);
+        switch (Z) {
+            case 1:
+                const soma = A + B;
+                console.log(`A soma entre ${A} e ${B} é: ${soma}`);
+                break;
+            case 2:
+                const sub = A - B;
+                console.log(`A subtração entre ${A} e ${B} é: ${sub}`);
+                break;
+            case 3:
+                const mult = A * B;
+                console.log(`A multiplicação entre ${A} e ${B} é: ${mult}`);
+                break;
+            case 4:
+                if (B === 0) {
+                    console.log('Não é possível dividir por zero.');
+                }
+                else {
+                    const div = A / B;
+                    console.log(`A divisão entre ${A} e ${B} é: ${div}`);
+                }
+                break;
+            default:
+                console.log('Operação inválida. Escolha uma das opções de 1 a 4.');
+        }
+    }
+    catch (error) {
+        console.error('Ocorreu um erro:', error);
+    }
+    finally {
+        rl.close();
+    }
+};
+main();

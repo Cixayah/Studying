@@ -35,7 +35,7 @@ const askQuestion = (question) => {
 };
 const main = async () => {
     try {
-        const inputZ = await askQuestion('Qual operação deseja realizar? 1 - Adição, 2 - Subtração, 3 - Multiplicação, 4 - Divisão: ');
+        const inputZ = await askQuestion('Qual operação deseja realizar? 1 Adição /  2 Subtração /  3 Multiplicação / 4 Divisão: ');
         const inputA = await askQuestion('Digite o valor A: ');
         const inputB = await askQuestion('Digite o valor B: ');
         const Z = parseInt(inputZ, 10);

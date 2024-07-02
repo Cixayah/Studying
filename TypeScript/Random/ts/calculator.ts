@@ -14,7 +14,7 @@ const askQuestion = (question: string): Promise<string> => {
 const main = async () => {
   try {
     const inputZ = await askQuestion(
-      'Qual operação deseja realizar? 1 - Adição, 2 - Subtração, 3 - Multiplicação, 4 - Divisão: '
+      'Qual operação deseja realizar? 1 Adição /  2 Subtração /  3 Multiplicação / 4 Divisão: '
     );
     const inputA = await askQuestion('Digite o valor A: ');
     const inputB = await askQuestion('Digite o valor B: ');

@@ -67,7 +67,7 @@ namespace CRUD
 
         public bool SaveEmployee()
         {
-            string insertQuery = $"INSERT INTO railway.employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
+            string insertQuery = $"INSERT INTO studying.employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
                                  $" VALUES('{Name}','{Phone}','{Email}','{Address}','{Number}','{Neighborhood}','{Rg}','{Cpf}')";
             return ExecuteNonQuery(insertQuery);
 
@@ -81,7 +81,7 @@ namespace CRUD
                 conn.Open();
 
                 string select = $"SELECT name, phone, email, address, number, neighborhood, rg, cpf " +
-                                $"FROM railway.employee WHERE cpf = '{searchTerm}';";
+                                $"FROM studying.employee WHERE cpf = '{searchTerm}';";
 
                 using MySqlCommand sqlCommand = CreateMySqlCommand(select, conn);
                 sqlCommand.CommandText = select;
@@ -110,7 +110,7 @@ namespace CRUD
 
         public bool EditEmployee()
         {
-            string updateQuery = $"UPDATE railway.employee SET" +
+            string updateQuery = $"UPDATE studying.employee SET" +
                 $" name = '{Name}', phone = '{Phone}', email = '{Email}'," +
                 $"address = '{Address}', number = '{Number}', neighborhood = '{Neighborhood}', rg = '{Rg}', cpf = '{Cpf}' WHERE id = {Id}";
             return ExecuteNonQuery(updateQuery);

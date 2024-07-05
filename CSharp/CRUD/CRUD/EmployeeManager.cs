@@ -1,8 +1,5 @@
 ﻿using DatabaseManager;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.Ocsp;
-using System;
-using System.Windows.Forms;
 
 namespace CRUD
 {
@@ -67,21 +64,23 @@ namespace CRUD
 
         public bool SaveEmployee()
         {
-            string insertQuery = $"INSERT INTO studying.employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
+            string insertQuery = $"INSERT INTO employee (name, phone, email, address, number, neighborhood, rg, cpf)" +
                                  $" VALUES('{Name}','{Phone}','{Email}','{Address}','{Number}','{Neighborhood}','{Rg}','{Cpf}')";
             return ExecuteNonQuery(insertQuery);
 
         }
 
-        public MySqlDataReader SearchEmployee(string searchTerm)
+        public EmployeeManager SearchEmployee(string searchTerm)
         {
+            EmployeeManager employee = new EmployeeManager();
+
             try
             {
                 using MySqlConnection conn = GetMySqlConnection();
                 conn.Open();
 
-                string select = $"SELECT name, phone, email, address, number, neighborhood, rg, cpf " +
-                                $"FROM studying.employee WHERE cpf = '{searchTerm}';";
+                string select = $"SELECT Id, name, phone, email, address, number, neighborhood, rg, cpf " +
+                                $"FROM employee WHERE cpf = '{searchTerm}';";
 
                 using MySqlCommand sqlCommand = CreateMySqlCommand(select, conn);
                 sqlCommand.CommandText = select;
@@ -89,9 +88,20 @@ namespace CRUD
 
                 if (reader != null && reader.HasRows)
                 {
-                    reader.Read();
+                    while (reader.Read())
+                    {
+                        employee.Id = int.Parse(reader["Id"].ToString());
+                        employee.Name = reader["Name"].ToString();
+                        employee.Phone = reader["Phone"].ToString();
+                        employee.Email = reader["Email"].ToString();
+                        employee.Address = reader["Address"].ToString();
+                        employee.Number = reader["Number"].ToString();
+                        employee.Neighborhood = reader["Neighborhood"].ToString();
+                        employee.Rg = reader["Rg"].ToString();
+                        employee.Cpf = reader["Cpf"].ToString();
+                    }
                     MessageBox.Show("Funcionário encontrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return reader;
+                    return employee;
                 }
                 else
                 {
@@ -110,7 +120,7 @@ namespace CRUD
 
         public bool EditEmployee()
         {
-            string updateQuery = $"UPDATE studying.employee SET" +
+            string updateQuery = $"UPDATE employee SET" +
                 $" name = '{Name}', phone = '{Phone}', email = '{Email}'," +
                 $"address = '{Address}', number = '{Number}', neighborhood = '{Neighborhood}', rg = '{Rg}', cpf = '{Cpf}' WHERE id = {Id}";
             return ExecuteNonQuery(updateQuery);

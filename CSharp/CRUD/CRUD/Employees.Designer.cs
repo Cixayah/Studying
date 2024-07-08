@@ -62,7 +62,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cascadia Code", 12F);
             label1.ForeColor = Color.FromArgb(80, 250, 123);
-            label1.Location = new Point(131, 66);
+            label1.Location = new Point(122, 66);
             label1.Name = "label1";
             label1.Size = new Size(55, 21);
             label1.TabIndex = 0;
@@ -117,9 +117,9 @@
             btnSearch.FlatStyle = FlatStyle.Popup;
             btnSearch.Font = new Font("Cascadia Code", 9F);
             btnSearch.ForeColor = Color.FromArgb(255, 121, 198);
-            btnSearch.Location = new Point(553, 284);
+            btnSearch.Location = new Point(551, 284);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
+            btnSearch.Size = new Size(77, 23);
             btnSearch.TabIndex = 5;
             btnSearch.TabStop = false;
             btnSearch.Text = "Buscar";
@@ -158,7 +158,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Cascadia Code", 12F);
             label2.ForeColor = Color.FromArgb(80, 250, 123);
-            label2.Location = new Point(104, 95);
+            label2.Location = new Point(90, 94);
             label2.Name = "label2";
             label2.Size = new Size(82, 21);
             label2.TabIndex = 8;
@@ -169,7 +169,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Cascadia Code", 12F);
             label3.ForeColor = Color.FromArgb(80, 250, 123);
-            label3.Location = new Point(113, 124);
+            label3.Location = new Point(101, 124);
             label3.Name = "label3";
             label3.Size = new Size(73, 21);
             label3.TabIndex = 9;
@@ -187,7 +187,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Cascadia Code", 12F);
             label4.ForeColor = Color.FromArgb(80, 250, 123);
-            label4.Location = new Point(95, 153);
+            label4.Location = new Point(80, 153);
             label4.Name = "label4";
             label4.Size = new Size(91, 21);
             label4.TabIndex = 11;
@@ -212,7 +212,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Cascadia Code", 12F);
             label5.ForeColor = Color.FromArgb(80, 250, 123);
-            label5.Location = new Point(113, 182);
+            label5.Location = new Point(101, 182);
             label5.Name = "label5";
             label5.Size = new Size(73, 21);
             label5.TabIndex = 13;
@@ -229,7 +229,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Cascadia Code", 12F);
             label7.ForeColor = Color.FromArgb(80, 250, 123);
-            label7.Location = new Point(149, 215);
+            label7.Location = new Point(143, 215);
             label7.Name = "label7";
             label7.Size = new Size(37, 21);
             label7.TabIndex = 17;
@@ -237,7 +237,7 @@
             // 
             // txtNeighborhood
             // 
-            txtNeighborhood.Location = new Point(325, 184);
+            txtNeighborhood.Location = new Point(335, 184);
             txtNeighborhood.Name = "txtNeighborhood";
             txtNeighborhood.Size = new Size(222, 23);
             txtNeighborhood.TabIndex = 18;
@@ -247,7 +247,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Cascadia Code", 12F);
             label10.ForeColor = Color.FromArgb(80, 250, 123);
-            label10.Location = new Point(246, 182);
+            label10.Location = new Point(244, 184);
             label10.Name = "label10";
             label10.Size = new Size(73, 21);
             label10.TabIndex = 21;
@@ -258,7 +258,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Cascadia Code", 12F);
             label9.ForeColor = Color.FromArgb(80, 250, 123);
-            label9.Location = new Point(298, 215);
+            label9.Location = new Point(300, 213);
             label9.Name = "label9";
             label9.Size = new Size(46, 21);
             label9.TabIndex = 23;
@@ -266,7 +266,7 @@
             // 
             // txtMaskRg
             // 
-            txtMaskRg.Location = new Point(192, 213);
+            txtMaskRg.Location = new Point(190, 213);
             txtMaskRg.Mask = "00.000.000-0";
             txtMaskRg.Name = "txtMaskRg";
             txtMaskRg.Size = new Size(100, 23);
@@ -274,7 +274,7 @@
             // 
             // txtMaskCpf
             // 
-            txtMaskCpf.Location = new Point(340, 213);
+            txtMaskCpf.Location = new Point(358, 213);
             txtMaskCpf.Mask = "000.000.000-00";
             txtMaskCpf.Name = "txtMaskCpf";
             txtMaskCpf.Size = new Size(100, 23);
@@ -292,7 +292,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Cascadia Code", 12F);
             label6.ForeColor = Color.FromArgb(80, 250, 123);
-            label6.Location = new Point(86, 282);
+            label6.Location = new Point(70, 284);
             label6.Name = "label6";
             label6.Size = new Size(100, 21);
             label6.TabIndex = 28;

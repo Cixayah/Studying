@@ -18,9 +18,7 @@ class Lol(commands.Cog):
     @app_commands.describe(champion="Nome do campeão")
     async def build(self, interact: discord.Interaction, champion: str):
         champion_formatted = champion.capitalize()  # Primeira letra maiúscula
-        build_link = (
-            f"https://www.leagueofgraphs.com/champions/builds/{champion}/master"
-        )
+        build_link = f"https://leagueofgraphs.com/champions/builds/{champion}/master"
         await interact.response.send_message(
             f"Aqui está o link da build para **{champion_formatted}**:\n{build_link}"
         )
@@ -30,12 +28,12 @@ class Lol(commands.Cog):
     @app_commands.describe(champion="Nome do campeão")
     async def counters(self, interact: discord.Interaction, champion: str):
         champion_formatted = champion.capitalize()  # Primeira letra maiúscula
-        counters_link = f"https://www.leagueofgraphs.com/champions/counters/{champion}"
+        counters_link = f"https://leagueofgraphs.com/champions/counters/{champion}"
         await interact.response.send_message(
             f"Aqui está o link dos counters para **{champion_formatted}**:\n{counters_link}"
         )
 
-    # Elo
+    # Futuras novas funções abaixo
 
 
 async def setup(bot):

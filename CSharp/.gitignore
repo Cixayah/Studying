@@ -10,3 +10,4 @@
 *.json
 /CRUD/CRUD/obj/Debug/net8.0-windows/CRUD.GeneratedMSBuildEditorConfig.editorconfig
 /CRUD/CRUD/obj/Debug/net8.0-windows/CRUD.csproj.AssemblyReference.cache
+secrets.json

@@ -4,6 +4,7 @@
 
 /.vs
 /CRUD/.vs
+/CRUD/CRUD/DatabaseManager.cs
 /CRUD/CRUD/obj/Debug/net8.0-windows/CRUD.AssemblyInfo.cs
 /CRUD/CRUD/obj/Debug/net8.0-windows/CRUD.AssemblyInfoInputs.cache
 /CRUD/CRUD/obj/Debug/net8.0-windows/CRUD.assets.cache

@@ -80,7 +80,9 @@ namespace CRUD
                 conn.Open();
 
                 string select = $"SELECT Id, name, phone, email, address, number, neighborhood, rg, cpf " +
-                                $"FROM employee WHERE cpf = '{searchTerm}';";
+                                $"FROM employee WHERE name or cpf = '{searchTerm}'" +
+                                $" OR cpf = '{searchTerm}';";
+                //WHERE campo necessário do click search
 
                 using MySqlCommand sqlCommand = CreateMySqlCommand(select, conn);
                 sqlCommand.CommandText = select;
@@ -116,14 +118,18 @@ namespace CRUD
             }
         }
 
-
-
         public bool EditEmployee()
         {
             string updateQuery = $"UPDATE employee SET" +
                 $" name = '{Name}', phone = '{Phone}', email = '{Email}'," +
                 $"address = '{Address}', number = '{Number}', neighborhood = '{Neighborhood}', rg = '{Rg}', cpf = '{Cpf}' WHERE id = {Id}";
             return ExecuteNonQuery(updateQuery);
+        }
+
+        public bool DeleteEmployee()
+        {
+            string deleteQuery = $"DELETE FROM employee WHERE id = {Id}";
+            return ExecuteNonQuery(deleteQuery);
         }
     }
 }

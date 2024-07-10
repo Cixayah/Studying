@@ -81,6 +81,11 @@ namespace CRUD
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //functions
@@ -140,5 +145,6 @@ namespace CRUD
                 }
             }
         }
+
     }
 }

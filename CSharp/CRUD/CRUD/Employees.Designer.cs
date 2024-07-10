@@ -152,6 +152,7 @@
             btnDelete.TabStop = false;
             btnDelete.Text = "Apagar";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // label2
             // 

@@ -619,6 +619,7 @@ target/
 # IPython
 profile_default/
 ipython_config.py
+.idea
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -712,3 +713,4 @@ CSharp/CRUD/CRUD/DatabaseManager.cs
 CSharp/CRUD/CRUD/DatabaseManager.cs
 CSharp/CRUD/CRUD/DatabaseManager.cs
 Python/Hashtag/45. Projeto 6 - Criação de Sites com Django - Criando uma cópia do Netflix/Hashflix/.prettierrc
+CSharp/CRUD/CRUD/DatabaseManager.cs

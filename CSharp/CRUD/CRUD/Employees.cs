@@ -43,15 +43,15 @@ namespace CRUD
                 string searchTerm = txtSearch.Text.Trim();
                 if (!string.IsNullOrEmpty(searchTerm))
                 {
-                    MySqlDataReader reader = querys.SearchEmployee(searchTerm);
+                    var reader = querys.SearchEmployee(searchTerm);
 
-                    if (reader != null && reader.HasRows)
+                    if (reader != null /*&& reader.HasRows*/)
                     {
-                        reader.Read();
+                        //reader.Read();
                         DisplayEmployeeData(reader);
                     }
 
-                    reader?.Close();
+                    //reader?.Close();
                 }
                 else
                 {
@@ -81,20 +81,25 @@ namespace CRUD
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //functions
-        private void DisplayEmployeeData(MySqlDataReader reader)
+        private void DisplayEmployeeData(EmployeeManager reader)
         {
-            lblId.Text = reader["id"].ToString();
-            txtName.Text = reader["name"].ToString();
-            txtMaskPhone.Text = reader["phone"].ToString();
-            txtEmail.Text = reader["email"].ToString();
-            txtAddress.Text = reader["address"].ToString();
-            txtNumber.Text = reader["number"].ToString();
-            txtNeighborhood.Text = reader["neighborhood"].ToString();
-            txtMaskRg.Text = reader["rg"].ToString();
-            txtMaskCpf.Text = reader["cpf"].ToString();
+            lblId.Text = reader.Id.ToString();
+            txtName.Text = reader.Name.ToString();
+            txtMaskPhone.Text = reader.Phone.ToString();
+            txtEmail.Text = reader.Email.ToString();
+            txtAddress.Text = reader.Address.ToString();
+            txtNumber.Text = reader.Number.ToString();
+            txtNeighborhood.Text = reader.Neighborhood.ToString();
+            txtMaskRg.Text = reader.Rg.ToString();
+            txtMaskCpf.Text = reader.Cpf.ToString();
         }
 
         private void EnableTextBoxes(bool p_state)
@@ -140,5 +145,6 @@ namespace CRUD
                 }
             }
         }
+
     }
 }

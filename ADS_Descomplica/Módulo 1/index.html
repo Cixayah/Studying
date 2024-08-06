@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Reserva de Viagem</title>
+    <!-- Fonte -->
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Formulário de Reserva de Viagem</h1>
+
+    <form action="#" method="post">
+        <!-- Nome -->
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </p>
+
+        <!-- Email -->
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- Serviços Desejados -->
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <p>
+                <input type="checkbox" id="passagens" name="servicos[]" value="Compra de Passagens">
+                <label for="passagens">Compra de Passagens</label>
+            </p>
+            <p>
+                <input type="checkbox" id="hospedagem" name="servicos[]" value="Reserva de Hospedagem">
+                <label for="hospedagem">Reserva de Hospedagem</label>
+            </p>
+            <p>
+                <input type="checkbox" id="aluguel" name="servicos[]" value="Aluguel de Veículos">
+                <label for="aluguel">Aluguel de Veículos</label>
+            </p>
+        </fieldset>
+
+        <!-- Forma de Pagamento -->
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <p>
+                <input type="radio" id="credito" name="pagamento" value="Cartão de Crédito" required>
+                <label for="credito">Cartão de Crédito</label>
+            </p>
+            <p>
+                <input type="radio" id="boleto" name="pagamento" value="Boleto">
+                <label for="boleto">Boleto</label>
+            </p>
+            <p>
+                <input type="radio" id="pix" name="pagamento" value="PIX">
+                <label for="pix">PIX</label>
+            </p>
+        </fieldset>
+
+        <!-- Prazo de Pagamento -->
+        <p>
+            <label for="prazo">Prazo de Pagamento:</label>
+            <select id="prazo" name="prazo">
+                <option value="à vista">À Vista</option>
+                <option value="cinco vezes sem juros">5x sem juros</option>
+                <option value="dez vezes com juros">10x com juros</option>
+            </select>
+        </p>
+
+        <!-- Comentários -->
+        <p>
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </p>
+
+        <!-- Botão de Envio -->
+        <p>
+            <input type="submit" value="Enviar Reserva">
+        </p>
+    </form>
+
+</body>
+
+</html>

@@ -1,468 +1,113 @@
-<script>
-    function toggleDisplay(element, parentElement) {
-        const classParent = parentElement.classList[0];
-        const classAngle = $(element).find('i')[0].classList[0];
+<!DOCTYPE html>
+<html lang="en">
 
-        if (classAngle == 'angle-right') {
-            $(`.${classParent} > ul`).css("display", "block");
-        } else if (classAngle == 'angle-down') {
-            $(`.${classParent} > ul`).css("display", "none");
-        }
-    }
-    document.addEventListener("DOMContentLoaded", function (event) {
-        var tam = $(window).width();
-        if (tam <= 768) {
-            const iconAtalhoMenu = document.querySelector(".atalho-menu");
-            const iconOpenMenu = document.querySelector(".cat");
-            const iconMenuSVG =
-                '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-            iconAtalhoMenu.insertAdjacentHTML("afterbegin", iconMenuSVG);
-            iconAtalhoMenu.classList.remove("icon-th", "botao", "principal");
-            $('.menu.superior > ul > .cab-nav').remove();
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            const ulAtalhosMobile = document.querySelector(".atalhos-mobile ul");
-
-            const newItemSideMenu = document.createElement("li");
-            newItemSideMenu.classList.add("menu-button");
-            ulAtalhosMobile.prepend(newItemSideMenu);
-
-
-            newItemSideMenu.append(iconAtalhoMenu);
-
-
-
-            const menuLateral = document.querySelector(".menu.superior > ul");
-
-            const closeMenuButton = document.createElement("button");
-
-            $('body').append(`<div class="overlay-menu"></div>`);
-            const overlayMenu = document.querySelector(".overlay-menu");
-
-
-
-            $('.menu.superior li.com-filho').append(`
-            <div onclick="toggleDisplay(this, this.parentElement)" class="angle-button">
-                <i class="angle-right"></i>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-          `);
+        </nav>
+    </header>
 
-            $('.com-filho > ul').css("display", "none");
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
+                Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+    </section>
 
-            $(".angle-button").click(function (event) {
-                $(this).find('i').toggleClass('angle-right').toggleClass('angle-down');
-            });
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            $('.angle-button').click(function () {
-                $('.angle-button').not(this).removeClass("active");
-            });
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
 
-            closeMenuButton.classList.add("closeMenuButton");
-            $('body').append(closeMenuButton);
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
 
-            iconOpenMenu.onclick = () => {
-                $('body').css("overflow", "hidden");
-                overlayMenu.style.display = "block";
-                closeMenuButton.classList.add("closeMenuButtonActive");
-            }
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
 
-            closeMenuButton.onclick = () => {
-                $('body').css("overflow", "scroll");
-                menuLateral.classList.remove("active");
-                overlayMenu.style.display = "none";
-                closeMenuButton.classList.remove("closeMenuButtonActive");
-            };
-
-            window.onclick = function (event) {
-                if (event.target == overlayMenu) {
-                    $('body').css("overflow", "scroll");
-                    menuLateral.classList.remove("active");
-                    overlayMenu.style.display = "none";
-                    closeMenuButton.classList.remove("closeMenuButtonActive");
-                }
-            }
-        }
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        var tam = $(window).width();
-        if (tam <= 767) {
-            if ($('#cabecalho .atalhos-mobile .icon-signout').is(':visible')) {
-                const urlLogout = `https://${window.location.hostname}/conta/logout`;
-                $('.menu.superior > ul').prepend(`
-                <li class="signout-menu-superior" style="border-bottom: 1px solid #D7D9DE !important;">
-                    <a href="${urlLogout}" class="signout-link">
-                        <i class="signout-icon-menu"></i>
-                        <span class="mt-4">Sair</span>
-                    </a>
-              </li>
-            `);
-            } else {
-                const urlLogin = `https://${window.location.hostname}/conta/login?next=/conta/index`;
-                $('.menu.superior > ul').prepend(`
-              <li class="signin-menu-superior">
-                <a href="${urlLogin}"  class="signin-link">
-                  <i class="signin-icon"></i>
-                  <span class="mt-4">Entrar na minha conta</span>
-                </a>
-              </li>
-              <li class="signup-menu-superior" style="border-bottom: 1px solid #D7D9DE !important;">
-                <a href="${urlLogin}"  class="signup-link">
-                  <i class="signup-icon"></i>
-                  <span class="mt-4">Cadastre-se</span>
-                </a>
-              </li>
-            `);
-            }
-
-        }
-    });
-</script>
-<style>
-    body {
-        --corLinkPrincipal: #000;
-        --corLinks: #777D8B;
-        --corLinksNivelTres: #ccc;
-        --backgroundMenuLateral: #F2F2F2;
-        --botaoFecharMenu: #bb0000;
-        --botaoFecharMenuCorX: #ffffff;
-        --corIconeMenu: #000000;
-
-        --srcAngleRight: url("https://cdn.awsli.com.br/1994/1994497/arquivos/angle-right-solid.svg");
-        ;
-        --srcAngleDown: url("https://cdn.awsli.com.br/1994/1994497/arquivos/angle-down-solid.svg");
-        ;
-        --srcSigninIcon: url("https://cdn.awsli.com.br/1994/1994497/arquivos/login.svg");
-        --srcSignupIcon: url("https://cdn.awsli.com.br/1994/1994497/arquivos/signup.svg");
-        --srcSignoutIcon: url("https://cdn.awsli.com.br/1994/1994497/arquivos/signout.svg");
-        --srcXMarkIcon: url("https://cdn.awsli.com.br/1994/1994497/arquivos/xmark-mobile.svg");
-    }
-
-    @media (max-width: 767.98px) {
-        #cabecalho {
-            position: absolute !important;
-            z-index: auto !important;
-        }
-
-        #cabecalho .atalhos-mobile {
-            display: block !important;
-        }
-
-        #cabecalho .atalhos-mobile ul {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        #cabecalho .atalhos-mobile ul li {
-            float: none;
-            margin: 0;
-        }
-
-        #cabecalho .atalhos-mobile ul li:first-child {
-            display: flex;
-            margin-right: auto;
-        }
-
-        #cabecalho .atalhos-mobile ul li.fundo-principal {
-            order: 3;
-        }
-
-        #cabecalho .atalhos-mobile ul li.menu-button {
-            display: flex;
-            align-items: center;
-        }
-
-        #cabecalho .atalhos-mobile ul li.menu-button a {
-            top: 0;
-        }
-
-        #cabecalho .atalhos-mobile ul li.menu-button a svg * {
-            color: var(--corIconeMenu);
-        }
-
-        .busca {
-            margin: 0;
-        }
-
-        .overlay-menu {
-            content: "";
-            display: none;
-            background: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 999;
-        }
-
-
-        .menu.superior {
-            position: relative;
-        }
-
-        .signin-menu-superior {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 15px;
-            border-style: solid !important;
-            padding-bottom: 30px !important;
-        }
-
-        .signin-link {
-            text-decoration: none;
-            display: flex !important;
-        }
-
-        .signout-link {
-            text-decoration: none;
-            display: flex !important;
-        }
-
-        .signin-icon {
-            display: flex !important;
-            background-image: var(--srcSigninIcon);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 20px !important;
-            height: 20px !important;
-            margin-right: 5px;
-            color: #777D8B;
-            margin-left: 0 !important;
-            background-color: var(--backgroundMenuLateral);
-        }
-
-        .signup-menu-superior {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 15px;
-            border-style: solid !important;
-            border-color: #D7D9DE;
-            padding-bottom: 20px !important;
-        }
-
-        .signout-menu-superior {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 15px;
-            border-style: solid !important;
-            border-color: #D7D9DE;
-            padding-bottom: 20px !important;
-        }
-
-        .signout-icon-menu {
-            display: flex !important;
-            background-image: var(--srcSignoutIcon);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 20px !important;
-            height: 20px !important;
-            margin-right: 5px;
-            color: #777D8B;
-            margin-left: 0 !important;
-            background-color: var(--backgroundMenuLateral);
-        }
-
-        .signup-link {
-            text-decoration: none;
-            display: flex !important;
-        }
-
-        .signup-icon {
-            display: flex !important;
-            background-image: var(--srcSignupIcon);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 20px !important;
-            height: 15px;
-            margin-right: 5px;
-            color: #777D8B;
-            margin-left: 0 !important;
-            background-color: var(--backgroundMenuLateral);
-        }
-
-        .closeMenuButton {
-            position: absolute;
-            top: 17px;
-            left: 262px;
-            background-color: transparent;
-            display: none;
-            justify-content: center;
-            z-index: 99999;
-            align-items: center;
-            background-image: var(--srcXMarkIcon);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 19px !important;
-            height: 15px;
-        }
-
-        /*
-      .closeMenuButton:before {
-        content: "X";
-        color: var(--botaoFecharMenuCorX);
-        transform: rotateX( 45deg );
-        font-size: 26px;
-        font-weight: 600px;
-      }
-      */
-
-        .closeMenuButtonActive {
-            display: flex !important;
-        }
-
-        .menu.superior>ul {
-            width: 240px !important;
-            margin: 0 !important;
-            padding: 20px 0 20px 0;
-            border: 0 !important;
-            display: flex !important;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999999 !important;
-            background: var(--backgroundMenuLateral) !important;
-            height: 100vh;
-            max-height: 100vh;
-            box-sizing: border-box;
-            max-width: 100vw;
-            transition: 0.3s ease-in-out all;
-            transform: translateX(-110%);
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-        }
-
-        .menu.superior .nivel-dois li,
-        .menu.lateral .nivel-dois li {
-            padding: 0 10px !important;
-        }
-
-        .menu.superior .nivel-tres li,
-        .menu.lateral .nivel-tres li {
-            padding: 0 10px !important;
-        }
-
-        .menu.superior .nivel-quatro li,
-        .menu.lateral .nivel-quatro li {
-            padding: 0 10px !important;
-        }
-
-        .menu.superior .nivel-um>li {
-            border-style: none !important;
-        }
-
-        .menu.superior .nivel-um>li>a {
-            align-items: center;
-        }
-
-        .menu.superior li.com-filho:after {}
-
-
-        .angle-button {
-            position: absolute;
-            top: 13px;
-            right: 0px;
-        }
-
-        .angle-button.active {
-            background: transparent !important;
-        }
-
-        .angle-right {
-            display: flex;
-            background-image: var(--srcAngleRight);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 50px;
-            height: 18px;
-            background-color: var(--backgroundMenuLateral);
-        }
-
-        .angle-down {
-            display: flex;
-            background-image: var(--srcAngleDown);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 50px;
-            height: 18px;
-            background-color: var(--backgroundMenuLateral);
-        }
-
-        .menu.superior .nivel-dois li.com-filho>.angle-button {
-            top: 6px !important;
-            right: -33px !important;
-        }
-
-        .menu.superior .nivel-tres li.com-filho>.angle-button {
-            top: 6px !important;
-        }
-
-        .menu.superior li {
-            background-color: transparent !important;
-        }
-
-        .menu.superior .titulo,
-        .menu.lateral .titulo {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px !important;
-            line-height: 26px;
-        }
-
-        .menu.superior .nivel-dois li a,
-        .menu.lateral .nivel-dois li a {
-            font-size: 16px !important;
-            color: #777D8B;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 26px;
-        }
-
-        .menu.superior ul {
-            box-shadow: none !important;
-        }
-
-        .menu.superior>ul ::-webkit-scrollbar {
-            display: none;
-        }
-
-        .menu.superior>ul.active {
-            transform: translateX(0);
-        }
-
-        .menu.superior>ul a {
-            color: var(--corLinks);
-        }
-
-        .menu.superior>ul a strong {
-            color: var(--corLinkPrincipal);
-            font-size: 16px;
-        }
-
-        .menu.superior .nivel-tres {
-            position: initial;
-            background: transparent;
-            left: initial;
-            max-width: 70vw;
-            box-sizing: border-box;
-        }
-
-        .menu.superior .nivel-tres a {
-            white-space: normal;
-            line-height: normal;
-            margin-bottom: 0.5rem;
-            color: var(--corLinksNivelTres);
-        }
-
-        .mt-4 {
-            margin-top: 4px;
-        }
-
-    }
-</style>
+</html>

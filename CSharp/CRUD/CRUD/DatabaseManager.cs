@@ -19,4 +19,3 @@ namespace DatabaseManager
         public static string ConnectionString = $"server={server}; user={user}; database={database}; port={port}; password={password}";
     }
 }
-

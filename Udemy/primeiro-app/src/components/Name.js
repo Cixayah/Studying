@@ -1,7 +1,7 @@
-function Name() {
+function Name(props) {
     return (
         <div>
-            <span>Amore mio, </span>
+            <span>Olá, {props.aluno} </span>
             <p>estou aprendendo react!</p>
         </div>
     )

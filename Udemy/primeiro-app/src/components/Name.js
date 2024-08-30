@@ -1,7 +1,7 @@
-function Name(props) {
+function Name(aluno, idade) {
     return (
         <div>
-            <span>Olá, {props.aluno} </span>
+            <span>Olá, {aluno} - idade: {idade} </span>
             <p>estou aprendendo react!</p>
         </div>
     )

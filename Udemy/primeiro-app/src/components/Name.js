@@ -1,7 +1,7 @@
-function Name(aluno, idade) {
+function Name({ aluno, idade }) {
     return (
         <div>
-            <span>Olá, {aluno} - idade: {idade} </span>
+            <span>Olá, {aluno} - idade: {idade} anos. </span>
             <p>estou aprendendo react!</p>
         </div>
     )

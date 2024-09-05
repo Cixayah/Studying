@@ -36,3 +36,4 @@ if (catchListPython) {
     catchListPython.style.color = '#3D833C';
 }
 
+const listAll = document.querySelectorAll('#id')

@@ -28,11 +28,11 @@ catchListTS.style.color = '#3178C6'
 
 let catchListJS = document.getElementsByTagName('li')[1];
 if (catchListJS) {
-    catchListJS.style.color = '#F7DF1E'; // Cor associada ao JavaScript
+    catchListJS.style.color = '#F7DF1E';
 }
 
 let catchListPython = document.getElementsByTagName('li')[2];
 if (catchListPython) {
-    catchListPython.style.color = '#3D833C'; // Cor associada ao Python (azul escuro)
+    catchListPython.style.color = '#3D833C';
 }
 

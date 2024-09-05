@@ -33,6 +33,6 @@ if (catchListJS) {
 
 let catchListPython = document.getElementsByTagName('li')[2];
 if (catchListPython) {
-    catchListPython.style.color = '#306998'; // Cor associada ao Python (azul escuro)
+    catchListPython.style.color = '#3D833C'; // Cor associada ao Python (azul escuro)
 }
 

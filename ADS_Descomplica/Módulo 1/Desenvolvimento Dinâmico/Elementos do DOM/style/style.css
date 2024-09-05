@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Share+Tech+Mono&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,13 @@ body {
     background-color: #0c0c0c;
 }
 body > h1 {
+    font-family: "Share Tech Mono", monospace;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 ul { 
     font-weight: bold;
@@ -18,9 +25,11 @@ a{
 }
 
 #langs {
+    font-family: "JetBrains Mono";
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 40vh; 
     font-size: 30px;
+    text-align: center;
 }

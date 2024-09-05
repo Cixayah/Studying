@@ -14,11 +14,25 @@
 //     alert('😥')
 // }
 
-function confirmDelete() {
-    let userResponse = confirm('Really want to delete this item?');
-    if (userResponse) {
-        alert('Item deleted!');
-    } else {
-        alert('Action cancelled!');
-    }
+// function confirmDelete() {
+//     let userResponse = confirm('Really want to delete this item?');
+//     if (userResponse) {
+//         alert('Item deleted!');
+//     } else {
+//         alert('Action cancelled!');
+//     }
+// }
+
+catchListTS = document.getElementsByTagName('li')[0];
+catchListTS.style.color = '#3178C6'
+
+let catchListJS = document.getElementsByTagName('li')[1];
+if (catchListJS) {
+    catchListJS.style.color = '#F7DF1E'; // Cor associada ao JavaScript
 }
+
+let catchListPython = document.getElementsByTagName('li')[2];
+if (catchListPython) {
+    catchListPython.style.color = '#306998'; // Cor associada ao Python (azul escuro)
+}
+

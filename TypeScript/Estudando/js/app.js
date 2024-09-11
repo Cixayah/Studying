@@ -13,3 +13,4 @@ let retorno = undefined;
 let nulo = null;
 let indefinido = undefined;
 let objeto = { chave: 'valor' };
+let testando = 'Memphis Depay';

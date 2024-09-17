@@ -20,7 +20,7 @@
 //         alert('Item deleted!');
 //     } else {
 //         alert('Action cancelled!');
-//     }
+//     } 
 // }
 
 catchListTS = document.getElementsByTagName('li')[0];

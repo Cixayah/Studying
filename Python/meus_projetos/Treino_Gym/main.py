@@ -1,0 +1,107 @@
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+
+# Definindo a paleta de cores do Dracula Theme
+colors_dracula = {
+    "background": colors.HexColor("#282A36"),
+    "foreground": colors.HexColor("#FF79C6"),
+    "highlight": colors.HexColor("#50FA7B"),
+}
+
+# Dados do treino
+treinos = {
+    "Segunda": [
+        "1. Supino Reto (ou Supino com Halteres) - 3 x 10-12",
+        "2. Supino Inclinado com Halteres - 3 x 10-12",
+        "3. Peck Deck (ou Fly com Halteres) - 3 x 10-15",
+        "4. Tríceps com Halteres - 3 x 10-12",
+        "5. Tríceps na Polia - 3 x 10-12",
+        "6. Cardio (caminhada leve ou bicicleta) - 20 min",
+    ],
+    "Terça": [
+        "1. Remada Unilateral com Halteres - 3 x 10-12",
+        "2. Puxada com Halteres - 3 x 10-12",
+        "3. Remada Baixa - 3 x 10-12",
+        "4. Rosca Direta - 3 x 10-12",
+        "5. Rosca Martelo - 3 x 10-12",
+        "6. Cardio (caminhada leve ou bicicleta) - 20 min",
+    ],
+    "Quarta": [
+        "1. Agachamento (pode ser apenas a movimentação) - 3 x 10-12",
+        "2. Leg Press - 3 x 10-15",
+        "3. Cadeira Extensora - 3 x 10-15",
+        "4. Cadeira Abdutora - 3 x 10-15",
+        "5. Mesa Flexora - 3 x 10-15",
+        "6. Panturrilha em Pé - 3 x 12-15",
+    ],
+    "Quinta": [
+        "1. Desenvolvimento com Halteres - 3 x 10-12",
+        "2. Elevação Lateral - 3 x 10-15",
+        "3. Elevação Frontal - 3 x 10-12",
+        "4. Encolhimento para Trapézio - 3 x 10-12",
+        "5. Cardio (caminhada leve ou bicicleta) - 20 min",
+    ],
+    "Sexta": [
+        "1. Levantamento Terra - 3 x 8-10",
+        "2. Agachamento - 3 x 10-12",
+        "3. Supino Reto - 3 x 10-12",
+        "4. Remada com Halteres - 3 x 10-12",
+        "5. Cardio (caminhada leve ou bicicleta) - 20 min",
+    ],
+    "Sábado": [
+        "1. Abdominal (abdominal reto leve) - 3 x 10-15",
+        "2. Cardio (caminhada leve ou bicicleta) - 45-60 min",
+    ],
+}
+
+# Criando o PDF
+pdf_file = "treino_semana_cix.pdf"
+c = canvas.Canvas(pdf_file, pagesize=letter)
+width, height = letter
+
+# Fundo personalizado
+c.setFillColor(colors_dracula["background"])
+c.rect(0, 0, width, height, fill=1)
+
+# Título
+c.setFont("Helvetica-Bold", 24)
+c.setFillColor(colors_dracula["highlight"])
+c.drawString(200, height - 50, "Plano de Treino do Cix")
+c.line(30, height - 55, width - 30, height - 55)  # Linha abaixo do título
+
+# Adicionando os treinos
+y = height - 100
+for dia, exercicios in treinos.items():
+    c.setFont("Helvetica-Bold", 16)
+    c.setFillColor(colors_dracula["highlight"])
+    c.drawString(30, y, dia)
+    y -= 20
+    c.setFont("Helvetica", 12)
+    for exercicio in exercicios:
+        # Extraindo o número e o restante do texto
+        numero, texto = exercicio.split(". ", 1)
+        # Desenhando o número em verde
+        c.setFillColor(colors_dracula["highlight"])
+        c.drawString(50, y, numero + ". ")
+
+        # Separando o texto das repetições
+        if " - " in texto:
+            exercicio_nome, repeticoes = texto.rsplit(" - ", 1)
+            # Desenhando o texto em branco
+            c.setFillColor(colors_dracula["foreground"])
+            c.drawString(70, y, exercicio_nome + " - ")
+            # Desenhando as repetições em verde
+            c.setFillColor(colors_dracula["highlight"])
+            c.drawString(70 + c.stringWidth(exercicio_nome + " - "), y, repeticoes)
+        else:
+            c.setFillColor(colors_dracula["foreground"])
+            c.drawString(70, y, texto)
+
+        y -= 15
+    y -= 10  # Espaço entre os dias
+
+# Salvando o PDF
+c.save()
+
+print("PDF de treino criado com sucesso!")

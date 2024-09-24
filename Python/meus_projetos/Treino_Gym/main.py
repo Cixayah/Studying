@@ -11,46 +11,48 @@ colors_dracula = {
 
 # Dados do treino
 treinos = {
-    "Segunda": [
-        "1. Supino Reto (ou Supino com Halteres) - 3 x 10-12",
-        "2. Supino Inclinado com Halteres - 3 x 10-12",
-        "3. Peck Deck (ou Fly com Halteres) - 3 x 10-15",
+    "Segunda (Peito e Tríceps)": [
+        "1. Supino Inclinado com Halteres - 3 x 10-12",
+        "2. Supino Reto (ou Supino com Halteres) - 3 x 10-12",
+        "3. Crucifíxo (ou Fly com Halteres) - 3 x 10-15",
         "4. Tríceps com Halteres - 3 x 10-12",
         "5. Tríceps na Polia - 3 x 10-12",
         "6. Cardio (caminhada leve ou bicicleta) - 20 min",
     ],
-    "Terça": [
-        "1. Remada Unilateral com Halteres - 3 x 10-12",
-        "2. Puxada com Halteres - 3 x 10-12",
-        "3. Remada Baixa - 3 x 10-12",
-        "4. Rosca Direta - 3 x 10-12",
-        "5. Rosca Martelo - 3 x 10-12",
-        "6. Cardio (caminhada leve ou bicicleta) - 20 min",
+    "Terça (Costas e Bíceps)": [
+        "1. Remada Unilateral - 3 x 10-12",
+        "2. Puxada Aberta - 3 x 10-12",
+        "3. Puxada Fechada - 3 x 10-12",
+        "4. Remada Baixa Fechada - 3 x 10-12",
+        "5. Rosca Direta - 3 x 10-12",
+        "6. Rosca Martelo - 3 x 10-12",
+        "7. Cardio (caminhada leve ou bicicleta) - 20 min",
     ],
-    "Quarta": [
+    "Quarta (Leg Day)": [
         "1. Agachamento (pode ser apenas a movimentação) - 3 x 10-12",
         "2. Leg Press - 3 x 10-15",
         "3. Cadeira Extensora - 3 x 10-15",
-        "4. Cadeira Abdutora - 3 x 10-15",
-        "5. Mesa Flexora - 3 x 10-15",
+        "4. Mesa Flexora - 3 x 10-15",
+        "5. Cadeira Abdutora - 3 x 10-15",
         "6. Panturrilha em Pé - 3 x 12-15",
     ],
-    "Quinta": [
+    "Quinta (Ombro)": [
         "1. Desenvolvimento com Halteres - 3 x 10-12",
-        "2. Elevação Lateral - 3 x 10-15",
-        "3. Elevação Frontal - 3 x 10-12",
-        "4. Encolhimento para Trapézio - 3 x 10-12",
-        "5. Cardio (caminhada leve ou bicicleta) - 20 min",
+        "2. Elevação Frontal - 3 x 10-12",
+        "3. Elevação Lateral - 3 x 10-15",
+        "4. Puxada Corda - 3 x 10-15",
+        "5. Encolhimento para Trapézio - 3 x 10-12",
+        "6. Cardio (caminhada leve ou bicicleta) - 20 min",
     ],
-    "Sexta": [
+    "Sexta (Full Body)": [
         "1. Levantamento Terra - 3 x 8-10",
         "2. Agachamento - 3 x 10-12",
         "3. Supino Reto - 3 x 10-12",
         "4. Remada com Halteres - 3 x 10-12",
         "5. Cardio (caminhada leve ou bicicleta) - 20 min",
     ],
-    "Sábado": [
-        "1. Abdominal (abdominal reto leve) - 3 x 10-15",
+    "Sábado (Abdominal + Cárdio)": [
+        "1. Abdominal (abdominal reto leve) - 3 x até morrer",
         "2. Cardio (caminhada leve ou bicicleta) - 45-60 min",
     ],
 }

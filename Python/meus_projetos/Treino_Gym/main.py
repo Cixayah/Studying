@@ -17,7 +17,7 @@ treinos = {
         "3. Crucifíxo (ou Fly com Halteres) - 3 x 10-15",
         "4. Tríceps com Halteres - 3 x 10-12",
         "5. Tríceps na Polia - 3 x 10-12",
-        "6. Cardio (caminhada leve ou bicicleta) - 20 min",
+        "6. Cardio - 20 min",
     ],
     "Terça (Costas e Bíceps)": [
         "1. Remada Unilateral - 3 x 10-12",
@@ -26,7 +26,7 @@ treinos = {
         "4. Remada Baixa Fechada - 3 x 10-12",
         "5. Rosca Direta - 3 x 10-12",
         "6. Rosca Martelo - 3 x 10-12",
-        "7. Cardio (caminhada leve ou bicicleta) - 20 min",
+        "7. Cardio - 20 min",
     ],
     "Quarta (Leg Day)": [
         "1. Agachamento (pode ser apenas a movimentação) - 3 x 10-12",
@@ -42,18 +42,18 @@ treinos = {
         "3. Elevação Lateral - 3 x 10-15",
         "4. Puxada Corda - 3 x 10-15",
         "5. Encolhimento para Trapézio - 3 x 10-12",
-        "6. Cardio (caminhada leve ou bicicleta) - 20 min",
+        "6. Cardio - 20 min",
     ],
     "Sexta (Full Body)": [
         "1. Levantamento Terra - 3 x 8-10",
         "2. Agachamento - 3 x 10-12",
         "3. Supino Reto - 3 x 10-12",
         "4. Remada com Halteres - 3 x 10-12",
-        "5. Cardio (caminhada leve ou bicicleta) - 20 min",
+        "5. Cardio - 20 min",
     ],
     "Sábado (Abdominal + Cárdio)": [
-        "1. Abdominal (abdominal reto leve) - 3 x até morrer",
-        "2. Cardio (caminhada leve ou bicicleta) - 45-60 min",
+        "1. Abdominal (abdominal reto) - 3 x até morrer",
+        "2. Cardio - 45-60 min",
     ],
 }
 

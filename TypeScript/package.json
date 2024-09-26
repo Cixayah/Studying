@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@types/node": "^20.14.2"
+    "@types/node": "^20.16.9"
   },
   "dependencies": {
     "prompt-sync": "^4.2.0",

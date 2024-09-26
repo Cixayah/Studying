@@ -1,1 +1,1 @@
-console.log("Teste de TypeScript!");
+console.log(1+1);

@@ -9,5 +9,5 @@ function countVowels(s) {
     }
     return count;
 }
-const exampleString = "Olá, meu nome é Gabriel Cix";
+const exampleString = "Olá, meu nome é Cix";
 console.log(countVowels(exampleString));

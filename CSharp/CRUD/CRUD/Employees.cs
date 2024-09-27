@@ -72,8 +72,26 @@ namespace CRUD
         {
             if (!string.IsNullOrEmpty(lblId.Text))
             {
-                EnableTextBoxes(true); // Habilita as caixas de texto para edição
-                                       // Você pode adicionar qualquer lógica adicional aqui, se necessário
+                // Confirma se o usuário deseja editar
+                DialogResult result = MessageBox.Show("Deseja salvar as alterações?", "Confirmar Edição", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // Atribui os novos valores das TextBoxes para o objeto querys
+                    AssignTextBoxValuesToQuerys();
+                    querys.Id = int.Parse(lblId.Text); // Pega o ID atual
+
+                    bool editSuccessful = querys.EditEmployee();
+                    if (editSuccessful)
+                    {
+                        MessageBox.Show("Registro atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        EnableTextBoxes(false);
+                        ClearAllFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao atualizar o registro. Verifique os dados e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
@@ -81,10 +99,36 @@ namespace CRUD
             }
         }
 
+
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                // Confirma se o usuário deseja deletar o registro
+                DialogResult result = MessageBox.Show("Tem certeza que deseja excluir este registro?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    querys.Id = int.Parse(lblId.Text); // Pega o ID atual
 
+                    bool deleteSuccessful = querys.DeleteEmployee();
+                    if (deleteSuccessful)
+                    {
+                        MessageBox.Show("Registro excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearAllFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao excluir o registro. Tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum registro selecionado para exclusão.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
 
 

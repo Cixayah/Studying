@@ -1,0 +1,12 @@
+"use strict";
+const nameString = 'Maria';
+console.log('Nome em maiúsculas:', nameString.toUpperCase());
+console.log('Nome em minúsculas:', nameString.toLowerCase());
+console.log('Número de caracteres:', nameString.length);
+const substring = 'ri';
+console.log(`A substring "${substring}" está presente no nome?`, nameString.includes(substring));
+const firstCharacter = nameString.charAt(0);
+console.log('Primeiro caractere do nome:', firstCharacter);
+const lastName = 'Silva';
+const fullName = nameString + ' ' + lastName;
+console.log('Nome completo:', fullName);

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="w-full max-w-md">
+        <h1 class="text-center text-2xl font-bold mb-6">Login</h1>
+
+        <!-- Formulário de Login -->
+        <div id="login-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h2 class="text-xl mb-4">Login</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="login-email">Email</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="login-email"
+                    type="email" placeholder="Digite seu email">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="login-password">Senha</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="login-password"
+                    type="password" placeholder="Digite sua senha">
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    id="login-btn">Login</button>
+            </div>
+        </div>
+        <p class="text-center">
+            <a href="register.html" class="text-blue-500 hover:underline">Criar uma conta</a>
+        </p>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

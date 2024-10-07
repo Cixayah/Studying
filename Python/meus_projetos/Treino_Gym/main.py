@@ -31,7 +31,7 @@ treinos = {
     ],
     "Quarta (Leg Day)": [
         "1. Agachamento - 4 x 10-12",
-        "2. Leg Press (ou Cadeira Leg Press)- 4 x 10-15",
+        "2. Leg Press (ou Cadeira Leg Press) - 4 x 10-15",
         "3. Cadeira Extensora - 3 x 10-15",
         "4. Agachamento Hack - 4 x 10-15",
         "5. Cadeira Flexora - 3 x 10-15",

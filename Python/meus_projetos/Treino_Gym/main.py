@@ -12,19 +12,20 @@ colors_dracula = {
 # Dados do treino
 treinos = {
     "Segunda (Peito e Tríceps)": [
-        "1. Supino Inclinado com Halteres (ou Supino Inclinado) - 3 x 10-12",
-        "2. Supino Reto com Halteres (ou Supino Reto) - 3 x 10-12",
-        "3. Crucifíxo (ou Fly com Halteres) - 3 x 10-15",
-        "4. Tríceps com Halteres - 3 x 10-12",
-        "5. Tríceps na Polia - 3 x 10-12",
-        "6. Cardio - 20 min+",
+        "1. Supino Inclinado com Halteres (ou Supino Inclinado Barra) - 3 x 10-12",
+        "2. Crucifíxo (ou Fly com Halteres) - 3 x 10-15",
+        "3. Supino Reto com Halteres (ou Supino Reto Barra) - 3 x 10-12",
+        "4. Tríceps na Polia - 3 x 10-12",
+        "5. Tríceps Francês - 3 x 10-12",
+        "6. Tríceps com Halteres - 3 x 10-12",
+        "7. Cardio - 20 min+",
     ],
     "Terça (Costas e Bíceps)": [
         "1. Remada Unilateral - 3 x 10-12",
         "2. Puxada Aberta - 3 x 10-12",
         "3. Puxada Fechada - 3 x 10-12",
         "4. Remada Baixa Fechada - 3 x 10-12",
-        "5. Rosca Direta - 4 x 10-12",
+        "5. Rosca Scott - 4 x 10-12",
         "6. Rosca Martelo - 4 x 10-12",
         "7. Cardio - 20 min+",
     ],
@@ -49,7 +50,7 @@ treinos = {
     "Sexta (Full Body)": [
         "1. Levantamento Terra - 4 x 8-10",
         "2. Agachamento - 3 x 10-12",
-        "3. Dumbell Press (Supino Reto) - 3 x 10-12",
+        "3. Dumbell Press (ou Supino Reto) - 3 x 10-12",
         "4. Remada com Halteres - 3 x 10-12",
         "5. Cardio - 20 min+",
     ],

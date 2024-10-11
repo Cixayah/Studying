@@ -14,10 +14,11 @@ treinos = {
     "Segunda (Peito e Tríceps)": [
         "1. Supino Inclinado com Halteres (ou Supino Inclinado Barra) - 3 x 10-12",
         "2. Crucifíxo (ou Fly com Halteres) - 3 x 10-15",
-        "3. Supino Reto com Halteres (ou Supino Reto Barra) - 3 x 10-12",
+        "3¹. Supino Reto com Halteres (ou Supino Reto Barra) - 3 x 10-12",
+        "3². Tríceps Supinado com Halteres (ou com Barra) - 3 x 10-12",
         "4. Tríceps na Polia - 3 x 10-12",
         "5. Tríceps Francês - 3 x 10-12",
-        "6. Tríceps com Halteres - 3 x 10-12",
+        "6. Tríceps Unilateral - 3 x 10-12",
         "7. Cardio - 20 min+",
     ],
     "Terça (Costas e Bíceps)": [

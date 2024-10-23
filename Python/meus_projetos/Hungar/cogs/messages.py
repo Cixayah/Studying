@@ -9,9 +9,15 @@ class Messages(commands.Cog):
         super().__init__()
 
     @commands.Cog.listener()
-    async def on_message(self, msg: discord.Message):
+    async def on_message(self, msg):
+        # Verifica se a mensagem foi enviada pelo bot
         if msg.author == self.bot.user:
-            await msg.add_reaction("👾")
+            try:
+                await msg.add_reaction("👾")
+            except discord.NotFound:
+                pass
+            except Exception as e:
+                print(f"Erro ao adicionar reação: {e}")
 
     @app_commands.command(description="Responde com: Opa, [seu nome] bão?")
     async def eai(self, interact: discord.Interaction):

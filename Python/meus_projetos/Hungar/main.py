@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix="/", intents=perms)
 
 async def load_cogs():
     # Carrega os módulos (cogs) do bot a partir do diretório 'cogs'
-    for archive in os.listdir("cogs"):
+    for archive in os.listdir("cogs/"):
         if archive.endswith(".py"):
             await bot.load_extension(f"cogs.{archive[:-3]}")
 
@@ -41,10 +41,15 @@ async def syncro(ctx: commands.Context):
 # Eventos do bot
 @bot.event
 async def on_member_remove(member: discord.Member):
-    # Envia uma mensagem quando um membro deixa o servidor, mencionando o perfil do membro
     channel = bot.get_channel(602254582118350868)
-    mention = member.mention  # Obtém a menção do perfil do membro que saiu
-    await channel.send(f"A pessoa corna {mention} saiu do server!")
+    if channel is not None:
+        mention = member.mention
+        try:
+            await channel.send(f"A pessoa corna {mention} saiu do server!")
+        except discord.Forbidden:
+            print("Não tenho permissão para enviar mensagens neste canal.")
+    else:
+        print("Canal não encontrado.")
 
 
 @bot.event  # Verificação se o bot ficou online.

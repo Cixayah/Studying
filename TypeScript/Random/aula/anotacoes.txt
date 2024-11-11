@@ -1,0 +1,19 @@
+tsc --init para criar tsconfig.json
+editar arquivo tsconfig.json com:
+
+
+"target": "ESNext" para ter a versão mais atual do JavaScript
+"rootDir": "./ts" para escolher o diretório raiz do arquivo TypeScript
+"outDir": "./js" para escolher o diretório de saida do arquivo transpilado do JavaScript
+
+
+
+transpilar: 
+tsc maneira manual que transpila todos os arquivos ts
+
+para ter transpilação automática:
+tsc -w
+
+para retirar os comentários da transpilação:
+"removeComments":true,
+

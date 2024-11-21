@@ -8,7 +8,7 @@
 # editor de texto ou em uma planilha eletrônica.
 # Um exemplo de um arquivo CSV pode ser:
 # Nome,Idade,Endereço
-# Luiz Otávio,32,"Av Brasil, 21, Centro"
+# Cix,32,"Av Brasil, 21, Centro"
 # João da Silva,55,"Rua 22, 44, Nova Era"
 # A primeira linha do arquivo define os nomes das colunas da, enquanto as
 # linhas seguintes contêm os valores das linhas, separados por vírgulas.

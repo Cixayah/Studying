@@ -1,4 +1,4 @@
-nome = 'Luiz Otávio'
+nome = 'Cix'
 sobrenome = 'Miranda'
 idade = 18
 ano_nascimento = 2022 - idade

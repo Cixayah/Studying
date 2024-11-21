@@ -8,7 +8,7 @@ class Carro:
         print(f'{self.nome} está acelerando...')
 
 
-string = 'Luiz'
+string = 'Gab'
 print(string.upper())
 
 fusca = Carro('Fusca')

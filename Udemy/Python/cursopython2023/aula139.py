@@ -11,7 +11,7 @@
 #         return retorno
 
 
-# string = MinhaString('Luiz')
+# string = MinhaString('Gab')
 # print(string.upper())
 
 class A(object):

@@ -47,7 +47,7 @@ with connection:
             'VALUES '
             '(%s, %s) '
         )
-        data = ('Luiz', 18)
+        data = ('Gab', 18)
         result = cursor.execute(sql, data)  # type: ignore
         # print(sql, data)
         # print(result)
@@ -101,7 +101,7 @@ with connection:
         data4 = (
             ("Siri", 22, ),
             ("Helena", 15, ),
-            ("Luiz", 18, ),
+            ("Gab", 18, ),
         )
         result = cursor.executemany(sql, data4)  # type: ignore
         # print(sql)

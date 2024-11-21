@@ -43,7 +43,7 @@ if __name__ == '__main__':
     lista = MyList()
     lista.append('Maria', 'Helena')
     lista[0] = 'João'
-    lista.append('Luiz')
+    lista.append('Gab')
     # print(lista[0])
     # print(len(lista))
     for item in lista:

@@ -39,7 +39,7 @@ import contas
 import pessoas
 from banco import Banco
 
-c1 = pessoas.Cliente('Luiz', 30)
+c1 = pessoas.Cliente('Gab', 30)
 cc1 = contas.ContaCorrente(111, 222, 0, 0)
 c1.conta = cc1
 c2 = pessoas.Cliente('Maria', 18)

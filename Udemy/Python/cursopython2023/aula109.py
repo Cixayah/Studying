@@ -11,7 +11,7 @@ def print_iter(iterator):
 
 
 pessoas = [
-    'João', 'Joana', 'Luiz', 'Letícia',
+    'João', 'Joana', 'Gab', 'Letícia',
 ]
 camisetas = [
     ['preta', 'branca'],

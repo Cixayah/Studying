@@ -5,7 +5,7 @@
 # deve ser contido dentro de uma única
 # expressão.
 # lista = [
-#     {'nome': 'Luiz', 'sobrenome': 'miranda'},
+#     {'nome': 'Gab', 'sobrenome': 'miranda'},
 #     {'nome': 'Maria', 'sobrenome': 'Oliveira'},
 #     {'nome': 'Daniel', 'sobrenome': 'Silva'},
 #     {'nome': 'Eduardo', 'sobrenome': 'Moreira'},
@@ -15,7 +15,7 @@
 # lista.sort(reverse=True)
 # sorted(lista)
 lista = [
-    {'nome': 'Luiz', 'sobrenome': 'miranda'},
+    {'nome': 'Gab', 'sobrenome': 'miranda'},
     {'nome': 'Maria', 'sobrenome': 'Oliveira'},
     {'nome': 'Daniel', 'sobrenome': 'Silva'},
     {'nome': 'Eduardo', 'sobrenome': 'Moreira'},

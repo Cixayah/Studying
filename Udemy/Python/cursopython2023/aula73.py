@@ -13,7 +13,7 @@ def executa(funcao, *args):
 
 
 print(
-    executa(saudacao, 'Bom dia', 'Luiz')
+    executa(saudacao, 'Bom dia', 'Gab')
 )
 print(
     executa(saudacao, 'Boa noite', 'Maria')

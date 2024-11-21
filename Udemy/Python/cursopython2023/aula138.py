@@ -31,7 +31,7 @@ class Aluno(Pessoa):
     ...
 
 
-c1 = Cliente('Luiz', 'Otávio')
+c1 = Cliente('Gab', 'Cix')
 c1.falar_nome_classe()
 a1 = Aluno('Maria', 'Helena')
 a1.falar_nome_classe()

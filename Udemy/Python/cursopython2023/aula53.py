@@ -1,8 +1,8 @@
 """
 enumerate - enumera iteráveis (índices)
 """
-# [(0, 'Maria'), (1, 'Helena'), (2, 'Luiz'), (3, 'João')]
-lista = ['Maria', 'Helena', 'Luiz']
+# [(0, 'Maria'), (1, 'Helena'), (2, 'Gab'), (3, 'João')]
+lista = ['Maria', 'Helena', 'Gab']
 lista.append('João')
 
 for indice, nome in enumerate(lista):

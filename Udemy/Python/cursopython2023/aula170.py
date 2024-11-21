@@ -1,10 +1,10 @@
 # os.listdir para navegar em caminhos
-# /Users/luizotavio/Desktop/EXEMPLO
-# C:\Users\luizotavio\Desktop\EXEMPLO
-# caminho = r'C:\\Users\\luizotavio\\Desktop\\EXEMPLO'
+# /Users/Gabotavio/Desktop/EXEMPLO
+# C:\Users\Gabotavio\Desktop\EXEMPLO
+# caminho = r'C:\\Users\\Gabotavio\\Desktop\\EXEMPLO'
 import os
 
-caminho = os.path.join('/Users', 'luizotavio', 'Desktop', 'EXEMPLO')
+caminho = os.path.join('/Users', 'Gabotavio', 'Desktop', 'EXEMPLO')
 
 for pasta in os.listdir(caminho):
     caminho_completo_pasta = os.path.join(caminho, pasta)

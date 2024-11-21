@@ -33,7 +33,7 @@ r_uniform = random.uniform(10, 20)
 print(r_uniform)
 
 # random.shuffle(SequenciaMutável) -> Embaralha a lista original
-nomes = ['Luiz', 'Maria', 'Helena', 'Joana']
+nomes = ['Gab', 'Maria', 'Helena', 'Joana']
 # random.shuffle(nomes)
 print(nomes)
 

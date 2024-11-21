@@ -45,7 +45,7 @@ sql = (
 # cursor.executemany(
 #     sql,
 #     (
-#         ('Joana', 4), ('Luiz', 5)
+#         ('Joana', 4), ('Gab', 5)
 #     )
 # )
 cursor.execute(sql, {'nome': 'Sem nome', 'peso': 3})

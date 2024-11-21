@@ -37,7 +37,7 @@ students = [
     # nome      idade nota
     ['João',    14,   5.5],
     ['Maria',   13,   9.7],
-    ['Luiz',    15,   8.8],
+    ['Gab',    15,   8.8],
     ['Alberto', 16,   10],
 ]
 

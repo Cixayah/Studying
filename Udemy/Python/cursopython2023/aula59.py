@@ -9,7 +9,7 @@ salas = [
     # 0
     ['Elaine', ],  # 1
     # 0       1       2
-    ['Luiz', 'João', 'Eduarda', ],  # 2
+    ['Gab', 'João', 'Eduarda', ],  # 2
 ]
 
 # p, b, *_, ap, u = lista

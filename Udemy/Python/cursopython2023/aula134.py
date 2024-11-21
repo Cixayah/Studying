@@ -29,7 +29,7 @@ class FerramentaDeEscrever:
         return f'{self.nome} está escrevendo'
 
 
-escritor = Escritor('Luiz')
+escritor = Escritor('Gab')
 caneta = FerramentaDeEscrever('Caneta Bic')
 maquina_de_escrever = FerramentaDeEscrever('Máquina')
 escritor.ferramenta = maquina_de_escrever

@@ -1,4 +1,4 @@
-variavel_modulo = 'Luiz'
+variavel_modulo = 'Gab'
 
 
 def soma(x, y):

@@ -6,7 +6,7 @@ def adiciona_clientes(nome, lista=None):
     return lista
 
 
-cliente1 = adiciona_clientes('luiz')
+cliente1 = adiciona_clientes('Gab')
 adiciona_clientes('Joana', cliente1)
 adiciona_clientes('Fernando', cliente1)
 cliente1.append('Edu')

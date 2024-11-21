@@ -54,7 +54,7 @@ class Banco:
 
 
 if __name__ == '__main__':
-    c1 = pessoas.Cliente('Luiz', 30)
+    c1 = pessoas.Cliente('Gab', 30)
     cc1 = contas.ContaCorrente(111, 222, 0, 0)
     c1.conta = cc1
     c2 = pessoas.Cliente('Maria', 18)

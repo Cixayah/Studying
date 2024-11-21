@@ -64,5 +64,5 @@ class Pessoa(metaclass=Meta):
         print('FALANDO...')
 
 
-p1 = Pessoa('Luiz')
+p1 = Pessoa('Gab')
 p1.falar()

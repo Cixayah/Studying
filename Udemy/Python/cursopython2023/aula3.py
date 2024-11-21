@@ -9,14 +9,14 @@ print(1234)
 
 # Aspas simples
 print('Cix')
-print(1, 'Luiz "Otávio"')
+print(1, 'Gab "Cix"')
 
 # Aspas duplas
 print("Cix")
-print(2, "Luiz 'Otávio'")
+print(2, "Gab 'Cix'")
 
 # Escape
-print("Luiz \"Otávio\"")
+print("Gab \"Cix\"")
 
 # r
-print(r"Luiz \"Otávio\"")
+print(r"Gab \"Cix\"")

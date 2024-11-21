@@ -1,5 +1,5 @@
 # dir, hasattr e getattr em Python
-string = 'Luiz'
+string = 'Gab'
 metodo = 'strip'
 
 if hasattr(string, metodo):

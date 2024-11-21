@@ -35,7 +35,7 @@ class Cliente(Pessoa):
 
 
 if __name__ == '__main__':
-    c1 = Cliente('Luiz', 30)
+    c1 = Cliente('Gab', 30)
     c1.conta = contas.ContaCorrente(111, 222, 0, 0)
     print(c1)
     print(c1.conta)

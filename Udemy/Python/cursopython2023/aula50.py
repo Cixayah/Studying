@@ -3,9 +3,9 @@ Exercício
 Exiba os índices da lista
 0 Maria
 1 Helena
-2 Luiz
+2 Gab
 """
-lista = ['Maria', 'Helena', 'Luiz']
+lista = ['Maria', 'Helena', 'Gab']
 lista.append('João')
 
 

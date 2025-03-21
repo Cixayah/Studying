@@ -1,0 +1,4 @@
+1 Cruz branca no amarelo > alinhe as cores do meio, depois inverte
+2 Encaixe no branco
+3 Alinhar cantos do branco
+4 Alinhar meio, lado oposto encima, lateral do cubo subindo onde vai entrar

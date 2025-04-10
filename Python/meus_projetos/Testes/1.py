@@ -22,3 +22,4 @@ def analisar_texto(texto):
     print(f"Frequência de letras: {freq_letras}")
 
 analisar_texto('Olá mundo! Este é um teste. Olá novamente.')
+

@@ -21,8 +21,17 @@ for round in range(1, max_attempts + 1):
         continue
     
     accept_num = attempts_int == secret_number
-    accept_num = attempts_int > secret_number
-    accept_num = attempts_int < secret_number
+    bigger = attempts_int > secret_number
+    lower = attempts_int < secret_number
     if (accept_num):
         print('Acertou!!')
         break
+    else:
+        print('Você errou!')
+        
+        if(bigger):
+            print('Sua tentativa foi maior que o número!')
+        if(lower):
+            print('Sua tentativa foi menor que o número!')
+print(f'O número secreto sorteado foi: {secret_number}.')
+print('\nObrigado por jogar\n')

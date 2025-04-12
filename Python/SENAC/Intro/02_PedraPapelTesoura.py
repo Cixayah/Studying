@@ -1,23 +1,24 @@
+from os import system,name
 import random
-def play_game():
-    choices = ['pedra', 'papel', 'tesoura']
-    computer_choice = random.choice(choices)
-    user_choice = input("Escolha pedra, papel ou tesoura: ")
 
-    if user_choice not in choices:
-        print("Escolha inválida. Tente novamente.")
-        return
-
-    print("Você escolheu:", user_choice)
-    print("O computador escolheu:", computer_choice)
-
-    if user_choice == computer_choice:
-        print("Empate!")
-    elif (user_choice == 'pedra' and computer_choice == 'tesoura') or \
-         (user_choice == 'papel' and computer_choice == 'pedra') or \
-         (user_choice == 'tesoura' and computer_choice == 'papel'):
-        print("Você venceu!")
-    else:
-        print("Você perdeu!")
-
-play_game()
+option = 's'
+while option.upper() == 'S':
+    system('cls')  if(name == 'nt') else system('clear')
+    
+    cpu = random.randint(0,2)
+    player = int(input('''Escolha uma opção para jogar: 
+                       [1] Pedra
+                       [2] Papel
+                       [3] Tesoura
+                       Digite sua escolha: '''))-1
+    opt_choices = ('Pedra','Papel', 'Tesoura')
+    table = (
+        ('NINGUÉM','JOGADOR','CPU'),
+        ('CPU','NINGUÉM','JOGADOR'),
+        ('JOGADOR','CPU','NINGUÉM')
+    )
+    
+    print(f'Você escolheu{opt_choices[player]}')
+    print(f'A CPU escolheu')
+    print(f'')
+    opt_choices=input('Jogar novamente?')

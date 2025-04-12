@@ -19,6 +19,6 @@ while option.upper() == 'S':
     )
     
     print(f'Você escolheu{opt_choices[player]}')
-    print(f'A CPU escolheu')
-    print(f'')
+    print(f'A CPU escolheu{opt_choices[cpu]}')
+    print(f'{table[cpu][player]} GANHOU!!!')
     opt_choices=input('Jogar novamente?')

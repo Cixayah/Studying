@@ -20,6 +20,9 @@ for round in range(1, max_attempts + 1):
         print('Tentativa inválida. Somente números de 1 a 100.')
         continue
     
-accept_num = attempts_int == secret_number
-accept_num = attempts_int > secret_number
-accept_num = attempts_int < secret_number
+    accept_num = attempts_int == secret_number
+    accept_num = attempts_int > secret_number
+    accept_num = attempts_int < secret_number
+    if (accept_num):
+        print('Acertou!!')
+        break

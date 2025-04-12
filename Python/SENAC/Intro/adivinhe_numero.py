@@ -19,3 +19,7 @@ for round in range(1, max_attempts + 1):
     if attempts_int < 1 or attempts_int > 100:
         print('Tentativa inválida. Somente números de 1 a 100.')
         continue
+    
+accept_num = attempts_int == secret_number
+accept_num = attempts_int > secret_number
+accept_num = attempts_int < secret_number

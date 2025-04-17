@@ -37,7 +37,7 @@ for _ in range(nf):
 
 text = input('Digite uma palavra: ')
 invert_string = text[::-1]
-print(invert_string)
+print(invert_string) 
 
 
 #5 Contar vogais

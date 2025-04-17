@@ -8,7 +8,7 @@ def cls():
 print('Soma de dois números')
 ask_number1 = int(input('Digite o primeiro número: '))
 ask_number2 = int(input('Digite o segundo número: '))
-results_sum = print(f'O resultado da soma dos dois números é {ask_number1+ask_number2}.')
+print(f'O resultado da soma dos dois números é {ask_number1+ask_number2}.')
 time.sleep(5)
 cls()
 

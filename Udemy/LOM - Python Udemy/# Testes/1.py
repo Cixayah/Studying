@@ -6,8 +6,8 @@ def cls():
 
 #1
 print('Soma de dois números')
-ask_number1 = (int(input('Digite o primeiro número: ')))
-ask_number2 = (int(input('Digite o segundo número: ')))
+ask_number1 = int(input('Digite o primeiro número: '))
+ask_number2 = int(input('Digite o segundo número: '))
 results_sum = print(f'O resultado da soma dos dois números é {ask_number1+ask_number2}.')
 time.sleep(5)
 cls()
@@ -15,7 +15,7 @@ cls()
 
 #2
 print('Número par ou ímpar')
-ask_par_impar = (int(input('Digite o número: ')))
+ask_par_impar = int(input('Digite o número: '))
 if ask_par_impar % 2:
     print(f'{ask_par_impar} é impar.')
 else:
@@ -26,9 +26,9 @@ cls()
 
 #3
 print('Calculadora simples')
-ask_num_calc1 = (int(input('Digite o primeiro número: ')))
-ask_num_calc2 = (int(input('Digite o segundo número: ')))
-ask_num_value = (str(input('Escolha a calculadora(+ - x /) ')))
+ask_num_calc1 = int(input('Digite o primeiro número: '))
+ask_num_calc2 = int(input('Digite o segundo número: '))
+ask_num_value = str(input('Escolha a calculadora(+ - x /) '))
 num_results = 0
 if ask_num_value == '+':
     num_results = ask_num_calc1 + ask_num_calc2

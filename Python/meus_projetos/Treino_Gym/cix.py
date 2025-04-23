@@ -9,60 +9,72 @@ colors_dracula = {
     "highlight": colors.HexColor("#50FA7B"),
 }
 
-# Dados do treino
+# Dados do novo treino
 treinos = {
-    "Segunda (Peito e Tríceps)": [
-        "1. Supino Inclinado com Halteres (ou Supino Inclinado Barra) - 3 x 10-12",
-        "2. Crucifíxo (ou Fly com Halteres) - 3 x 10-15",
-        "3¹. Supino Reto com Halteres (ou Supino Reto Barra) - 3 x 10-12",
-        "3². Tríceps Supinado com Halteres (ou com Barra) - 3 x 10-12",
-        "4. Tríceps na Polia - 3 x 10-12",
-        "5. Tríceps Francês - 3 x 10-12",
-        "6. Tríceps Unilateral - 3 x 10-12",
-        "7. Cardio - 20 min+",
+    "Segunda (Peito, Tríceps e Ombro Frontal/Lateral)": [
+        "1. Supino Reto com Halteres - 4 x 8-10",
+        "2. Supino Inclinado com Halteres - 3 x 10-12",
+        "3. Crossover no Cabo - 3 x 12-15",
+        "4. Desenvolvimento com Halteres - 4 x 10",
+        "5. Elevação Lateral com Halteres - 3 x 12-15",
+        "6. Tríceps Testa com Barra EZ - 3 x 12",
+        "7. Tríceps na Polia com Corda - 3 x 15",
+        "8. Cardio - 20 min+",
     ],
-    "Terça (Costas e Bíceps)": [
-        "1. Remada Unilateral - 3 x 10-12",
-        "2. Puxada Aberta - 3 x 10-12",
-        "3. Puxada Fechada - 3 x 10-12",
-        "4. Remada Baixa Fechada - 3 x 10-12",
-        "5. Rosca Scott - 4 x 10-12",
-        "6. Rosca Martelo - 4 x 10-12",
-        "7. Cardio - 20 min+",
+    "Terça (Costas, Bíceps e Ombro Posterior)": [
+        "1. Puxada na Frente - 4 x 8-10",
+        "2. Remada na Máquina ou Barra T - 4 x 10",
+        "3. Remada Unilateral com Halter - 3 x 12",
+        "4. Face Pull no Cabo - 3 x 15",
+        "5. Crucifixo Inverso no Peck Deck - 3 x 15",
+        "6. Rosca Direta com Barra EZ - 3 x 10",
+        "7. Rosca Martelo - 3 x 12",
+        "8. Cardio - 20 min+",
     ],
-    "Quarta (Leg Day)": [
-        "1. Agachamento - 4 x 10-12",
-        "2. Leg Press (ou Cadeira Leg Press) - 4 x 10-15",
-        "3. Cadeira Extensora - 3 x 10-15",
-        "4. Agachamento Hack - 4 x 10-15",
-        "5. Cadeira Flexora - 3 x 10-15",
-        "6. Mesa Flexora - 4 x 10-15",
-        "7. Cadeira Abdutora - 3 x 10-15",
-        "8. Panturrilha - 3 x 12-15",
+    "Quarta (Perna + Abdômen)": [
+        "1. Agachamento Livre - 4 x 8-10",
+        "2. Leg Press 45º - 4 x 10-12",
+        "3. Cadeira Extensora - 3 x 15",
+        "4. Mesa Flexora - 3 x 12",
+        "5. Stiff com Halteres - 3 x 10",
+        "6. Panturrilha Sentada - 4 x 20",
+        "7. Elevação de Pernas - 3 x 20",
+        "8. Abdominal Solo ou Máquina - 3 x 20",
     ],
-    "Quinta (Ombro)": [
-        "1. Desenvolvimento com Halteres - 3 x 10-12",
-        "2. Elevação Frontal - 4 x 10-12",
-        "3. Elevação Lateral - 4 x 10-15",
-        "4. Puxada Corda - 3 x 10-15",
-        "5. Encolhimento para Trapézio - 3 x 10-12",
-        "6. Cardio - 20 min+",
+    "Quinta (Peito, Tríceps e Ombro Frontal/Lateral)": [
+        "1. Supino Reto com Halteres - 4 x 8-10",
+        "2. Supino Inclinado com Halteres - 3 x 10-12",
+        "3. Crossover no Cabo - 3 x 12-15",
+        "4. Desenvolvimento com Halteres - 4 x 10",
+        "5. Elevação Lateral com Halteres - 3 x 12-15",
+        "6. Tríceps Testa com Barra EZ - 3 x 12",
+        "7. Tríceps na Polia com Corda - 3 x 15",
+        "8. Cardio - 20 min+",
     ],
-    "Sexta (Full Body)": [
-        "1. Levantamento Terra - 4 x 8-10",
-        "2. Agachamento - 3 x 10-12",
-        "3. Dumbell Press (ou Supino Reto) - 3 x 10-12",
-        "4. Remada com Halteres - 3 x 10-12",
-        "5. Cardio - 20 min+",
+    "Sexta (Costas, Bíceps e Ombro Posterior)": [
+        "1. Puxada na Frente - 4 x 8-10",
+        "2. Remada na Máquina ou Barra T - 4 x 10",
+        "3. Remada Unilateral com Halter - 3 x 12",
+        "4. Face Pull no Cabo - 3 x 15",
+        "5. Crucifixo Inverso no Peck Deck - 3 x 15",
+        "6. Rosca Direta com Barra EZ - 3 x 10",
+        "7. Rosca Martelo - 3 x 12",
+        "8. Cardio - 20 min+",
     ],
-    "Sábado (Abdominal + Cardio)": [
-        "1. Abdominal (abdominal reto) - 4 x até morrer",
-        "2. Cardio - 45-60 min",
+    "Sábado (Perna + Abdômen)": [
+        "1. Agachamento Livre - 4 x 8-10",
+        "2. Leg Press 45º - 4 x 10-12",
+        "3. Cadeira Extensora - 3 x 15",
+        "4. Mesa Flexora - 3 x 12",
+        "5. Stiff com Halteres - 3 x 10",
+        "6. Panturrilha Sentada - 4 x 20",
+        "7. Elevação de Pernas - 3 x 20",
+        "8. Abdominal Solo ou Máquina - 3 x 20",
     ],
 }
 
 # Criando o PDF
-pdf_file = "treino_semana_cix.pdf"
+pdf_file = "treino_semana_cix_atualizado.pdf"
 c = canvas.Canvas(pdf_file, pagesize=letter)
 width, height = letter
 
@@ -73,8 +85,8 @@ c.rect(0, 0, width, height, fill=1)
 # Título
 c.setFont("Helvetica-Bold", 24)
 c.setFillColor(colors_dracula["highlight"])
-c.drawString(200, height - 50, "Plano de Treino do Cix")
-c.line(30, height - 55, width - 30, height - 55)  # Linha abaixo do título
+c.drawString(170, height - 50, "Plano de Treino do Cix")
+c.line(30, height - 55, width - 30, height - 55)
 
 # Adicionando os treinos
 y = height - 100
@@ -85,29 +97,22 @@ for dia, exercicios in treinos.items():
     y -= 20
     c.setFont("Helvetica", 12)
     for exercicio in exercicios:
-        # Extraindo o número e o restante do texto
         numero, texto = exercicio.split(". ", 1)
-        # Desenhando o número em verde
         c.setFillColor(colors_dracula["highlight"])
         c.drawString(50, y, numero + ". ")
-
-        # Separando o texto das repetições
         if " - " in texto:
             exercicio_nome, repeticoes = texto.rsplit(" - ", 1)
-            # Desenhando o texto em branco
             c.setFillColor(colors_dracula["foreground"])
             c.drawString(70, y, exercicio_nome + " - ")
-            # Desenhando as repetições em verde
             c.setFillColor(colors_dracula["highlight"])
             c.drawString(70 + c.stringWidth(exercicio_nome + " - "), y, repeticoes)
         else:
             c.setFillColor(colors_dracula["foreground"])
             c.drawString(70, y, texto)
-
         y -= 15
-    y -= 10  # Espaço entre os dias
+    y -= 10
 
 # Salvando o PDF
 c.save()
 
-print("PDF de treino criado com sucesso!")
+print("PDF de treino atualizado criado com sucesso!")

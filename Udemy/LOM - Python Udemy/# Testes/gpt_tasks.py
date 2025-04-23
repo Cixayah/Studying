@@ -33,8 +33,8 @@ for _ in range(nf):
     print(a, end = " ")
     a, b = b, a+b    
 
-#4 Inverter uma String
 
+#4 Inverter uma String
 text = input('Digite uma palavra: ')
 invert_string = text[::-1]
 print(invert_string) 
@@ -49,6 +49,7 @@ for letter in text_v:
     if letter in vog:
         count_v +=1
 print(f'O número de vogais é: {count_v}.')
+
 
 #6 Lista de quadrados
 squares = [x**2 for x in range (1,21)]

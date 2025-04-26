@@ -31,12 +31,12 @@ def gg():
         print(f'Erros: {correctly_letters}')
         print(correctly_letters)
         
-        if(correctly):
+    if(correctly):
             desenhos.vencedor()
-        else:
+    else:
             desenhos.perdedor(secret_word)
             
-        print('\nObrigado por participar!\n')
+    print('\nObrigado por participar!\n')
         
 if(__name__ == "__main__"):
     gg()

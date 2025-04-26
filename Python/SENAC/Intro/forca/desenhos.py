@@ -61,9 +61,9 @@ def vencedor():
     print("         _.' '._        ")
     print("        '-------'       ")
 
-def perdedor(palavra_secreta):
+def perdedor(secret_word):
     print("Puxa, você foi enforcado!")
-    print("A palavra era {}".format(palavra_secreta))
+    print("A palavra era {}".format(secret_word))
     print("    _______________         ")
     print("   /               \       ")
     print("  /                 \      ")

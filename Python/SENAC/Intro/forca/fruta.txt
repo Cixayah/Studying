@@ -3,7 +3,7 @@ amora
 ameixa
 acerola
 abacaxi
-açai
+acai
 banana
 carambola
 caju
@@ -30,7 +30,7 @@ mamao
 melao
 maracuja
 manga
-maça
+maca
 mexerica
 morango
 nectarina

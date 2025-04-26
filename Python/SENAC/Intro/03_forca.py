@@ -21,22 +21,22 @@ def gg():
                 if(try_chance == letter):
                     correctly_letters[index] = letter    
                 index += 1
-    else:
-        errors += 1
-        desenhos.forca(errors)
-        wrong_trys.append(try_chance)
-    dead = errors == 7
-    correctly = '_' not in correctly_letters
-    print(f'Dica: {tip.upper()}')
-    print(f'Erros: {correctly_letters}')
-    print(correctly_letters)
-    
-    if(correctly):
-        desenhos.vencedor()
-    else:
-        desenhos.perdedor(secret_word)
+        else:
+            errors += 1
+            desenhos.forca(errors)
+            wrong_trys.append(try_chance)
+        dead = errors == 7
+        correctly = '_' not in correctly_letters
+        print(f'Dica: {tip.upper()}')
+        print(f'Erros: {correctly_letters}')
+        print(correctly_letters)
         
-    print('\nObrigado por participar!\n')
+        if(correctly):
+            desenhos.vencedor()
+        else:
+            desenhos.perdedor(secret_word)
+            
+        print('\nObrigado por participar!\n')
         
-if(__name__ == "__main"):
+if(__name__ == "__main__"):
     gg()

@@ -16,7 +16,6 @@ def set_theme():
     
     tips = ('carros' ,'cidade' ,'país' ,'nome' ,'fruta')
     return tips[tip-1]
-
 def load_secret_word(theme):
     dir_name = path.dirname(path.abspath(__file__))
     archive = open(f'{dir_name}\\{theme}.txt','r')
@@ -28,6 +27,5 @@ def load_secret_word(theme):
     number = random.randrange(0, len(words)+1)
     secret_word = words[number].upper()
     return secret_word
-
 def init_corrects_letters(secret_word):
     return ['_' for letter in secret_word]

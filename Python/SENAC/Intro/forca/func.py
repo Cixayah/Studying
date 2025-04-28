@@ -7,12 +7,12 @@ def print_opening_msg():
     
 def set_theme():
     tip = int(input("""
-                    Digite a opção para o tema:
                     1 - Carros
                     2 - Cidades do Brasil 
                     3 - Países
                     4 - Nome de pessoas
-                    5 - Frutas """))
+                    5 - Frutas
+                    Digite a opção para o tema: """))
     
     tips = ('carros' ,'cidade' ,'país' ,'nome' ,'fruta')
     return tips[tip-1]

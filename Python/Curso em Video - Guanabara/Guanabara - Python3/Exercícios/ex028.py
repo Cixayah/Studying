@@ -1,3 +1,7 @@
+def clear_screen():
+    import os
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 while True:
     time = int(input('Quantos anos tem seu carro? '))
     if time <= 3:
@@ -6,6 +10,7 @@ while True:
         print('Carro velho')
 
     question = input('Deseja continuar? (s/n) ').strip().lower()
+
     if question == 'n':
         print('Fim do programa')
         break

@@ -3,3 +3,8 @@ if name == 'Cix':
     print(f'Seja vem vindo administrador{name}')
 else:
     print(f'Seja bem vindo{name}')
+    
+    
+    
+    
+    

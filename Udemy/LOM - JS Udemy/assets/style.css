@@ -1,0 +1,14 @@
+body {
+  background-color: #1d1d1d;
+}
+button {
+  background-color: blue;
+  padding: 12.5vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Usa a altura total da tela */
+}

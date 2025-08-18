@@ -6,10 +6,11 @@ let simbolo: symbol = Symbol('qualquer-symbol');
 // Array
 let arrayDeNumeros: Array<number> = [1, 2, 3];
 let arrayDeNumeros2: number[] = [1, 2, 3];
+let arrayDeSrings: string[] = ['a', 'b', 'c'];
 // Objetos
 let pessoa: { nome: string, idade: number, adulto?: boolean } = {
     nome: 'Cix',
-    idade: 27
+    idade: 28
 };
 // Funções
 function soma(x: number, y: number): number {

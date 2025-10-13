@@ -34,4 +34,13 @@ function getValue(userValue: any) {
 }
 console.log(getValue(1))
 
-//7 - Cria uma nova função que recebe dois números e retorna a soma deles se o resultado for positivo ou zero. Se der negativo, retorna "número negativo".
+//7 - Crie uma nova função que recebe dois números e retorna a soma deles se o resultado for positivo ou zero. Se der negativo, retorna "número negativo".
+function sumTwoNumbers(n1: number, n2: number) {
+    let sumTwoNumb: number = n1 + n2;
+    if (sumTwoNumb < 0){
+        return 'número negativo'
+    } else {
+        return sumTwoNumb
+    }
+}
+console.log(sumTwoNumbers(1,-2))

@@ -27,3 +27,11 @@ function numberPrev(numPrev: number) {
     return numPrev -1
 }
 console.log(numberPrev(10)); //9
+
+// 6 - Crie uma função que recebe uma variável e retorne seu tipo. Usamos operador typeof para determinar o tipo de variável.
+function getValue(userValue: any) {
+    return typeof userValue
+}
+console.log(getValue(1))
+
+//7 - Cria uma nova função que recebe dois números e retorna a soma deles se o resultado for positivo ou zero. Se der negativo, retorna "número negativo".

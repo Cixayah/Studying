@@ -24,7 +24,7 @@ console.log(numBoolean(-1)); //false
 
 // 5 - Crie uma função que recebe um número e retorna seu antecessor. Por ex, se o número for 5, retorne 4.
 function numberPrev(numPrev: number) {
-    return numPrev -1
+    return numPrev - 1
 }
 console.log(numberPrev(10)); //9
 
@@ -36,11 +36,15 @@ console.log(getValue(1))
 
 //7 - Crie uma nova função que recebe dois números e retorna a soma deles se o resultado for positivo ou zero. Se der negativo, retorna "número negativo".
 function sumTwoNumbers(n1: number, n2: number) {
-    let sumTwoNumb: number = n1 + n2;
-    if (sumTwoNumb < 0){
+    if (n1 + n2 < 0) {
         return 'número negativo'
     } else {
-        return sumTwoNumb
+        return n1 + n2
     }
 }
-console.log(sumTwoNumbers(1,-2))
+console.log(sumTwoNumbers(1, 6))
+
+//8 - Crie uma função que recebe dois valores e retorna a divisão entre eles. Caso não sej apossível realizar a divisão, a função deve retornar um erro.
+function divTwoNumbers() {
+
+}

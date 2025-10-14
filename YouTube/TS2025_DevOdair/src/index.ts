@@ -44,7 +44,43 @@ function sumTwoNumbers(n1: number, n2: number) {
 }
 console.log(sumTwoNumbers(1, 6))
 
-//8 - Crie uma função que recebe dois valores e retorna a divisão entre eles. Caso não sej apossível realizar a divisão, a função deve retornar um erro.
-function divTwoNumbers() {
-
+//8 - Crie uma função que recebe dois valores e retorne a divisão entre eles. Caso não seja possível realizar a divisão, a função deve retornar um erro.
+function divTwoNumbers(nd1: number, nd2: number) {
+    if (nd2 === 0) {
+        return 'Não foi possível realizar divisão por zero'
+    }
+    return nd1 / nd2
 }
+console.log(divTwoNumbers(1, 0))
+
+//9 - Crie uma função que recebe dois números e o tipo de operação matemática. A função deve realizar o calculo com base na operação matemática oferecida.
+type CalcParameters = {
+    opN1: number,
+    opN2: number,
+    opt: 'sum' | 'sub' | 'mul' | 'div'
+}
+function opNum({ opN1, opN2, opt }: CalcParameters): number | string {
+    switch (opt) {
+        case 'sum':
+            return opN1 + opN2;
+        case 'sub':
+            return opN1 - opN2;
+        case 'mul':
+            return opN1 * opN2;
+        case 'div':
+            // Reutiliza a lógica de checagem da divisão
+            if (opN2 === 0) {
+                return 'Erro: Não é possível dividir por zero';
+            }
+            return opN1 / opN2;
+        default:
+            // Caso o tipo de operação seja inválido (apesar dos tipos já ajudarem a prevenir isso)
+            return 'Erro: Operação inválida';
+    }
+}
+// Exemplos de uso correto (passando um objeto com as três propriedades):
+console.log(opNum({ opN1: 10, opN2: 5, opt: 'sum' })); // 15
+console.log(opNum({ opN1: 10, opN2: 5, opt: 'div' })); // 2
+console.log(opNum({ opN1: 10, opN2: 0, opt: 'div' })); // Erro: Não é possível dividir por zero
+
+//10 - Crie uma função que recebe o lado de um quadrado como parâmetro e calcula a área desse quadrado. O retorno deve ser a área calculada.

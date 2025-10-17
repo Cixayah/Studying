@@ -84,3 +84,21 @@ console.log(opNum({ opN1: 10, opN2: 5, opt: 'div' })); // 2
 console.log(opNum({ opN1: 10, opN2: 0, opt: 'div' })); // Erro: Não é possível dividir por zero
 
 //10 - Crie uma função que recebe o lado de um quadrado como parâmetro e calcula a área desse quadrado. O retorno deve ser a área calculada.
+type SquareProps = {
+    side: number;
+}
+function calcArea({ side }: SquareProps) {
+    return side * side;
+}
+console.log(calcArea({
+    side: 5
+})); // 25
+
+//11 - Crie uma função que recebe o lado de um quadrado como parâmetro e calcula o perímetro desse quadrado. O retorno deve ser o perímetro calculado.
+function calcPerimeter({ side }: SquareProps) {
+    return side * 4;
+}
+console.log(calcPerimeter({
+    side: 5
+})); // 20
+

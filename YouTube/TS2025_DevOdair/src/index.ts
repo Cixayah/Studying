@@ -138,6 +138,20 @@ type ConvMeansureProps = {
     value: number;
     unit: "metro" | "cm";
 }
-function convMeasure({ value, unit }: ConvMeansureProps) {
-
+function convMeasure({ value, unit }: ConvMeansureProps): number {
+    if (unit === "metro") {
+        // Converte de metros para centímetros (1 metro = 100 cm)
+        return value * 100;
+    } else {
+        // Converte de centímetros para metros (1 cm = 0.01 metro)
+        return value / 100;
+    }
 }
+// De metros para cm
+const cincoMetrosEmCm = convMeasure({ value: 5, unit: "metro" }); // 500
+console.log(`5 metros são ${cincoMetrosEmCm} cm`);
+// De cm para metros
+const duzentosCmEmMetros = convMeasure({ value: 200, unit: "cm" }); // 2
+console.log(`200 cm são ${duzentosCmEmMetros} metros`);
+
+//15 - Crie uma função que calcula a qtd de azulejos necessários para preencher uma parede que possui 4.05cm de comprimento e 3m de altura. Sabe-se que os azulejos possuem dimensão 15cm x 15cm (largura x altura)

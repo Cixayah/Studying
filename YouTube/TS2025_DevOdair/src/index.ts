@@ -102,3 +102,42 @@ console.log(calcPerimeter({
     side: 5
 })); // 20
 
+//12 - Crie uma função que recebe o lado de um quadrado como parâmetro e calcula o perímetro e a área desse quadrado. O retorno deve ser o perímetro e a área calculados.
+function calcAreaPerimeter({ side }: SquareProps) {
+    const area = calcArea({ side });
+    const perimeter = calcPerimeter({ side });
+    return {
+        area,
+        perimeter
+    };
+}
+console.log(calcAreaPerimeter({
+    side: 3
+}))
+
+//13 - Crie uma função que recebe os lados de um retângulo como parâmetro e calcula o perímetro e a área desse retângulo. O retorno deve ser o perímetro e a área.
+type RectangleProps = {
+    sideRecWidth: number,
+    sideRecHeight: number,
+}
+function calcRetAreaPerimeter({ sideRecWidth, sideRecHeight }: RectangleProps) {
+    const areaRec = sideRecWidth * sideRecHeight;
+    const perimeterRec = 2 * (sideRecWidth + sideRecHeight)
+    return {
+        areaRec,
+        perimeterRec
+    }
+}
+console.log(calcRetAreaPerimeter({
+    sideRecWidth: 2,
+    sideRecHeight: 8
+}))
+
+//14 - Escreva uma função que converta um valor entre metros e cm. A função deve receber um número e sua unidade de medida atual ("metro" ou "cm") e retornar o valor convertido para outra unidade.
+type ConvMeansureProps = {
+    value: number;
+    unit: "metro" | "cm";
+}
+function convMeasure({ value, unit }: ConvMeansureProps) {
+
+}

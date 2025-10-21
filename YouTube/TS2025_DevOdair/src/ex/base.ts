@@ -17,7 +17,7 @@ let estaAtivo: boolean = true;
 let contador: number = 5;
 
 // Implícita (TS adivinha): TS infere que é 'string'.
-let saudacao = "Olá Mundo!"; 
+let saudacao = "Olá Mundo!";
 // É como se fosse: let saudacao: string = "Olá Mundo!";
 
 
@@ -74,9 +74,9 @@ interface Usuario {
     id: number;
     nomeCompleto: string;
     // O '?' torna a propriedade opcional.
-    email?: string; 
+    email?: string;
     // Propriedade somente leitura (não pode ser alterada após a criação)
-    readonly dataCadastro: Date; 
+    readonly dataCadastro: Date;
 }
 
 // O objeto 'user' DEVE seguir a estrutura da interface 'Usuario'.

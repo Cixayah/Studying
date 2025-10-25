@@ -102,3 +102,56 @@ console.log(calcPerimeter({
     side: 5
 })); // 20
 
+//12 - Crie uma função que recebe o lado de um quadrado como parâmetro e calcula o perímetro e a área desse quadrado. O retorno deve ser o perímetro e a área calculados.
+function calcAreaPerimeter({ side }: SquareProps) {
+    const area = calcArea({ side });
+    const perimeter = calcPerimeter({ side });
+    return {
+        area,
+        perimeter
+    };
+}
+console.log(calcAreaPerimeter({
+    side: 3
+}))
+
+//13 - Crie uma função que recebe os lados de um retângulo como parâmetro e calcula o perímetro e a área desse retângulo. O retorno deve ser o perímetro e a área.
+type RectangleProps = {
+    sideRecWidth: number,
+    sideRecHeight: number,
+}
+function calcRetAreaPerimeter({ sideRecWidth, sideRecHeight }: RectangleProps) {
+    const areaRec = sideRecWidth * sideRecHeight;
+    const perimeterRec = 2 * (sideRecWidth + sideRecHeight)
+    return {
+        areaRec,
+        perimeterRec
+    }
+}
+console.log(calcRetAreaPerimeter({
+    sideRecWidth: 2,
+    sideRecHeight: 8
+}))
+
+//14 - Escreva uma função que converta um valor entre metros e cm. A função deve receber um número e sua unidade de medida atual ("metro" ou "cm") e retornar o valor convertido para outra unidade.
+type ConvMeansureProps = {
+    value: number;
+    unit: "metro" | "cm";
+}
+function convMeasure({ value, unit }: ConvMeansureProps): number {
+    if (unit === "metro") {
+        // Converte de metros para centímetros (1 metro = 100 cm)
+        return value * 100;
+    } else {
+        // Converte de centímetros para metros (1 cm = 0.01 metro)
+        return value / 100;
+    }
+}
+// De metros para cm
+const cincoMetrosEmCm = convMeasure({ value: 5, unit: "metro" }); // 500
+console.log(`5 metros são ${cincoMetrosEmCm} cm`);
+// De cm para metros
+const duzentosCmEmMetros = convMeasure({ value: 200, unit: "cm" }); // 2
+console.log(`200 cm são ${duzentosCmEmMetros} metros`);
+
+//15 - Crie uma função que calcula a qtd de azulejos necessários para preencher uma parede que possui 4.05cm de comprimento e 3m de altura. Sabe-se que os azulejos possuem dimensão 15cm x 15cm (largura x altura)

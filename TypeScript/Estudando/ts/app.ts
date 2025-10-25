@@ -15,3 +15,4 @@ let nulo: null = null;
 let indefinido: undefined = undefined;
 let objeto: object = { chave: 'valor' };
 let testando: string = '';
+

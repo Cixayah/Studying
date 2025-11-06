@@ -26,23 +26,36 @@ console.log(inverterString('subino'))
 
 // 5. Escreva uma função que receba um array de números e retorne a soma de todos os elementos.
 function somarArray(numeros: number[]): number {
-    // Seu código aqui
-}
+    return numeros.reduce((acumulador, numeroAtual) => acumulador + numeroAtual, 0);
+} console.log(somarArray([10, 5, 15]))
 
 // 6. Escreva uma função que receba um array de números e retorne o maior número encontrado.
 function encontrarMaior(numeros: number[]): number {
-    // Seu código aqui
+    let maior = numeros[0];
+    for (const numero of numeros) {
+        if (numero > maior) {
+            maior = numero;
+        }
+    }
+    return maior;
 }
+console.log(encontrarMaior([50, 10, 11, 2]))
 
 // 7. Escreva uma função que receba um array de números e retorne um novo array contendo apenas os números pares.
 function filtrarPares(numeros: number[]): number[] {
-    // Seu código aqui
-}
+    return numeros.filter(numero => numero % 2 === 0);
+} console.log(filtrarPares([1, 2, 3, 4, 5, 6]))
 
 // 8. Escreva uma função que receba uma string e retorne a contagem de quantas vezes a letra 'a' (minúscula ou maiúscula) aparece nela.
 function contarLetraA(texto: string): number {
-    // Seu código aqui
-}
+    let contador = 0;
+    for (const char of texto) {
+        if (char.toLowerCase() === 'a') {
+            contador++;
+        }
+    }
+    return contador;
+} console.log(contarLetraA("Banana"))
 
 /* Exemplos de Teste (remova o comentário para testar):
 console.log("5. Soma do Array:", somarArray([10, 5, 15])); // Deve retornar 30

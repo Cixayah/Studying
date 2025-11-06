@@ -24,4 +24,4 @@ function calcularIMC(peso: number, altura: number): void {
 }
 
 // Exemplo:
-calcularIMC(103, 1.77);
+calcularIMC(103, 1.77); 
